@@ -1,0 +1,108 @@
+{
+  "extends": ["plugin:astro/recommended", "prettier"],
+  "plugins": ["strict-dependencies", "import", "unused-imports"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "unused-imports/no-unused-imports": "error",
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "pathGroups": [
+          {
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/constants/**",
+            "group": "internal",
+            "position": "before"
+          },
+
+          {
+            "pattern": "@/features/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/functions/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/hooks/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/layouts/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/lib/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/pages/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/styles/**",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "@/types/**",
+            "group": "internal",
+            "position": "before"
+          }
+        ]
+      }
+    ],
+    "strict-dependencies/strict-dependencies": [
+      "error",
+      [
+        /**
+         * Example:
+         * Limit the dependencies in the following directions
+         * pages -> components/page -> components/ui
+         */
+        {
+          // "module": "src/components/page",
+          // "allowReferenceFrom": ["src/pages"],
+          // components/page can't import other components/page
+          // "allowSameModule": false
+        }
+      ]
+    ]
+  },
+  "overrides": [
+    {
+      // Define the configuration for `.astro` file.
+      "files": ["*.astro"],
+      // Allows Astro components to be parsed.
+      "parser": "astro-eslint-parser",
+      // Parse the script in `.astro` as TypeScript by adding the following configuration.
+      // It's the setting you need when using TypeScript.
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".astro"]
+      },
+      "rules": {
+        // override/add rules settings here, such as:
+        // "astro/no-set-html-directive": "error"
+      }
+    }
+  ],
+  "ignorePatterns": ["src/env.d.ts"]
+}

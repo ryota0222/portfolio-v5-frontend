@@ -8,9 +8,42 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky install",
+    "lint": "yarn lint:prettier && yarn lint:es && yarn lint:style",
+    "format": "yarn format:prettier && yarn format:es && yarn format:style",
+    "lint:prettier": "yarn prettier --check .",
+    "format:prettier": "yarn prettier --check --write .",
+    "lint:es": "yarn eslint",
+    "format:es": "yarn eslint --fix",
+    "lint:style": "yarn stylelint **/*.{css,scss}",
+    "format:style": "yarn stylelint **/*.{css,scss} --fix"
   },
   "dependencies": {
     "astro": "^2.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-strict-dependencies": "^1.0.2",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "prettier-plugin-astro": "^0.8.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^6.0.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "yarn lint:es",
+    "*.{css,scss}": "yarn lint:style",
+    "*.{js,ts,scss,md}": "yarn lint:prettier"
   }
 }

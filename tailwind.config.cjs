@@ -13,6 +13,9 @@ module.exports = {
       backgroundImage: {
         'gradation-clip': "url('/images/gradient.png')",
       },
+      height: {
+        'full-dvh': '100dvh',
+      },
     },
   },
   plugins: [],

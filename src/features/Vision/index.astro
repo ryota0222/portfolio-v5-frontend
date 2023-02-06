@@ -1,0 +1,79 @@
+<div class="masked w-[290px] h-[40px] md:w-[600px] md:h-[76px] lg:w-[658px] lg:h-[84px]">
+  <div class="left-move bg"></div>
+  <div class="right-move bg"></div>
+</div>
+
+<style>
+  .masked {
+    display: flex;
+    background: #222222;
+    -webkit-mask-image: url('/images/vision.svg');
+    mask-image: url('/images/vision.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+  }
+  .bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #000000 0%,
+        #000000 25%,
+        #f8ff9b 30%,
+        #3fd1df 38%,
+        #bed480 46%,
+        #9f86e4 56%,
+        #76bedb 65%,
+        #000000 75%,
+        #000000 100%
+      )
+      0 0 / 400% 100%;
+  }
+
+  :global(.dark) .bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #ffffff 25%,
+        #f8ff9b 30%,
+        #3fd1df 38%,
+        #bed480 46%,
+        #9f86e4 56%,
+        #76bedb 65%,
+        #ffffff 75%,
+        #ffffff 100%
+      )
+      0 0 / 400% 100%;
+  }
+
+  .wrapper {
+    display: flex;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .left-move {
+      animation: move-left-bg 2s linear;
+    }
+    .right-move {
+      animation: move-left-bg 2s linear;
+      transform: rotate(180deg);
+    }
+    @keyframes move-left-bg {
+      to {
+        background-position: 100% 0;
+      }
+    }
+  }
+</style>

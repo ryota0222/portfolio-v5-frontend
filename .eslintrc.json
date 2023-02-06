@@ -1,9 +1,9 @@
 {
-  "extends": ["plugin:astro/recommended", "prettier"],
+  "extends": ["plugin:astro/recommended", "standard-with-typescript", "prettier"],
   "plugins": ["strict-dependencies", "import", "unused-imports"],
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2020
+    "ecmaVersion": 13
   },
   "rules": {
     "unused-imports/no-unused-imports": "error",

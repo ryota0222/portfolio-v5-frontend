@@ -1,5 +1,7 @@
 ---
 import { TITLE, DESCRIPTION, IMAGE } from '@/constants/meta';
+import Header from '@/features/Header/index.astro';
+import '@/styles/globals.css';
 
 export interface Props {
   title?: string;
@@ -38,7 +40,8 @@ const _title = title ? `${title} - ${TITLE}` : TITLE;
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={url} />
   </head>
-  <body>
+  <body class="bg-white dark:bg-dark">
+    <Header />
     <slot />
   </body>
 </html>

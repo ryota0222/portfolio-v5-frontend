@@ -7,6 +7,12 @@ module.exports = {
       colors: {
         dark: '#333333',
       },
+      fontFamily: {
+        rokkitt: ['Rokkitt'],
+      },
+      backgroundImage: {
+        'gradation-clip': "url('/images/gradient.png')",
+      },
     },
   },
   plugins: [],

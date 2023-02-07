@@ -1,17 +1,16 @@
 ---
 import { LogoComponent } from '@/components/ui/LogoComponent';
 import { ModeToggleButton } from '@/components/ui/ModeToggleButton';
+import { Title } from './components/Title';
 ---
 
-<div class="fixed top-0 left-0 w-full">
+<div class="fixed top-0 left-0 w-full z-50">
   <header class="container mx-auto px-2 py-4 flex justify-between items-center">
     <a href="/" class="flex items-center gap-3">
       <span class="bg-dark dark:bg-white inline-flex justify-center items-center p-2 rounded-full w-10 h-10">
         <LogoComponent client:load />
       </span>
-      <h1 class="font-rokkitt font-bold text-black dark:text-white text-2xl">
-        I'm <span class="bg-clip-text text-transparent bg-gradation-clip bg-cover">RyoTa.</span>
-      </h1>
+      <Title client:load />
     </a>
     <ModeToggleButton client:load />
   </header>

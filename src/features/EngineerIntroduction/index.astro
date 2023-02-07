@@ -1,11 +1,14 @@
 ---
 import Description from './Description.astro';
 import Title from './Title.astro';
+import { ScreenEventObserver } from '@/components/system/ScreenEventObserver';
 ---
 
-<div class="container mx-auto max-w-3xl px-4">
-  <Title />
-  <div class="mt-20 mx-auto max-w-2xl flex flex-col gap-2">
-    <Description />
+<ScreenEventObserver client:load id="engineer">
+  <div class="container mx-auto max-w-3xl px-4 mt-24" id="engineer">
+    <Title />
+    <div class="mt-8 md:mt-20 mx-auto max-w-2xl flex flex-col gap-2">
+      <Description />
+    </div>
   </div>
-</div>
+</ScreenEventObserver>

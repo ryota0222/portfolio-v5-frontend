@@ -1,4 +1,10 @@
 export enum Mode {
-  dark = 'dark',
-  light = 'light',
+  Dark = 'dark',
+  Light = 'light',
+}
+
+export enum ScreenMode {
+  Visible = 'VISIBLE',
+  AboveViewport = 'ABOVE_VIEWPORT',
+  BelowViewport = 'BELOW_VIEWPORT',
 }

@@ -1,13 +1,10 @@
 import { memo } from 'react';
-import UseAnimations from 'react-useanimations';
-// EVERY ANIMATION NEEDS TO BE IMPORTED FIRST -> YOUR BUNDLE WILL INCLUDE ONLY WHAT IT NEEDS
-import github from 'react-useanimations/lib/github';
-import twitter from 'react-useanimations/lib/twitter';
-import instagram from 'react-useanimations/lib/instagram';
-import { useIsDarkMode } from '@/components/ui/ModeToggleButton/hooks/useToggleMode';
+import githubAnimation from '@/constants/github.json';
+import twitterAnimation from '@/constants/twitter.json';
+import instagramAnimation from '@/constants/instagram.json';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 export const SnsGroup = memo(() => {
-  const [isDarkMode] = useIsDarkMode();
   return (
     <>
       {/* desktop */}
@@ -17,14 +14,50 @@ export const SnsGroup = memo(() => {
             SNS
           </span>
         </div>
-        <a href="https://twitter.com/RyoTa___0222" target="_blank" rel="noopener noreferrer">
-          <UseAnimations strokeColor={isDarkMode ? '#d6d3d1' : '#78716c'} size={32} animation={twitter} />
+        <a
+          className="sns-animation-icon-wrapper"
+          href="https://twitter.com/RyoTa___0222"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Player
+            src={twitterAnimation}
+            style={{
+              height: '32px',
+              width: '32px',
+            }}
+            hover
+          />
         </a>
-        <a href="https://github.com/ryota0222" target="_blank" rel="noopener noreferrer">
-          <UseAnimations strokeColor={isDarkMode ? '#d6d3d1' : '#78716c'} size={32} animation={github} />
+        <a
+          className="sns-animation-icon-wrapper"
+          href="https://github.com/ryota0222"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Player
+            src={githubAnimation}
+            style={{
+              height: '32px',
+              width: '32px',
+            }}
+            hover
+          />
         </a>
-        <a href="https://www.instagram.com/tobanai_penguin" target="_blank" rel="noopener noreferrer">
-          <UseAnimations strokeColor={isDarkMode ? '#d6d3d1' : '#78716c'} size={32} animation={instagram} />
+        <a
+          className="sns-animation-icon-wrapper"
+          href="https://www.instagram.com/tobanai_penguin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Player
+            src={instagramAnimation}
+            style={{
+              height: '32px',
+              width: '32px',
+            }}
+            hover
+          />
         </a>
       </div>
       {/* sp */}
@@ -33,14 +66,50 @@ export const SnsGroup = memo(() => {
           SNS
         </span>
         <div className="flex gap-4">
-          <a href="https://twitter.com/RyoTa___0222" target="_blank" rel="noopener noreferrer">
-            <UseAnimations strokeColor={isDarkMode ? '#d6d3d1' : '#78716c'} size={32} animation={twitter} />
+          <a
+            className="sns-animation-icon-wrapper"
+            href="https://twitter.com/RyoTa___0222"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Player
+              src={twitterAnimation}
+              style={{
+                height: '32px',
+                width: '32px',
+              }}
+              hover
+            />
           </a>
-          <a href="https://github.com/ryota0222" target="_blank" rel="noopener noreferrer">
-            <UseAnimations strokeColor={isDarkMode ? '#d6d3d1' : '#78716c'} size={32} animation={github} />
+          <a
+            className="sns-animation-icon-wrapper"
+            href="https://github.com/ryota0222"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Player
+              src={instagramAnimation}
+              style={{
+                height: '32px',
+                width: '32px',
+              }}
+              hover
+            />
           </a>
-          <a href="https://www.instagram.com/tobanai_penguin" target="_blank" rel="noopener noreferrer">
-            <UseAnimations strokeColor={isDarkMode ? '#d6d3d1' : '#78716c'} size={32} animation={instagram} />
+          <a
+            className="sns-animation-icon-wrapper"
+            href="https://www.instagram.com/tobanai_penguin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Player
+              src={instagramAnimation}
+              style={{
+                height: '32px',
+                width: '32px',
+              }}
+              hover
+            />
           </a>
         </div>
       </div>

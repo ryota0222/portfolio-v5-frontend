@@ -88,7 +88,7 @@ export const SnsGroup = memo(() => {
             rel="noopener noreferrer"
           >
             <Player
-              src={instagramAnimation}
+              src={githubAnimation}
               style={{
                 height: '32px',
                 width: '32px',

@@ -3,6 +3,7 @@ import { TITLE, DESCRIPTION, IMAGE } from '@/constants/meta';
 import Header from '@/features/Header/index.astro';
 import Footer from '@/features/Footer/index.astro';
 import '@/styles/globals.css';
+import { ReferentialMeasurement } from '@/components/system/ReferentialMeasurement';
 
 export interface Props {
   title?: string;
@@ -42,6 +43,7 @@ const _title = title ? `${title} - ${TITLE}` : TITLE;
     <link rel="canonical" href={url} />
   </head>
   <body class="bg-white dark:bg-dark">
+    <ReferentialMeasurement client:load />
     <Header />
     <slot />
     <Footer />

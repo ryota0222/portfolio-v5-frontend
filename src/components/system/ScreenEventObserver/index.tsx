@@ -2,7 +2,7 @@ import { useOnScreen } from '@/hooks/useOnScreen';
 import { ScreenMode } from '@/types/global';
 import React, { memo, useRef } from 'react';
 import type { PropsWithChildren } from 'react';
-import { useUpdateEffect } from 'react-use';
+import { useUpdateEffect } from '@/hooks/useUpdateEffect';
 
 interface Props {
   id: string;

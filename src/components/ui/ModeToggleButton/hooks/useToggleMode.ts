@@ -1,7 +1,9 @@
 import { useCallback, useEffect } from 'react';
-import { createGlobalState } from 'react-use';
 
 import { Mode } from '@/types/global';
+import { isBrowser } from '@/misc/util';
+import { useLocalStorage } from '@/hooks/useLocalStorage';
+import createGlobalState from '@/factory/createGlobalState';
 
 type UseDarkMode = () => {
   isDarkMode: boolean;
@@ -13,22 +15,23 @@ const theme = localStorage.getItem('theme');
 const isInitialDark =
   theme !== null
     ? JSON.parse(theme) === Mode.Dark
-    : typeof window !== 'undefined'
+    : isBrowser
     ? window.matchMedia('(prefers-color-scheme: dark)').matches
     : false;
 
 export const useIsDarkMode = createGlobalState<boolean>(isInitialDark);
 
 export const useDarkMode: UseDarkMode = () => {
+  const [_, setValue] = useLocalStorage<Mode>('theme');
   const [isDarkMode, setIsDarkMode] = useIsDarkMode();
   // modeを切り替える
   const toggle = useCallback(
     (isDark?: boolean) => {
       const isNextDarkMode = typeof isDark === 'undefined' ? !isDarkMode : isDark;
       setIsDarkMode(isNextDarkMode);
-      localStorage.setItem('theme', isNextDarkMode ? Mode.Dark : Mode.Light);
+      setValue(isNextDarkMode ? Mode.Dark : Mode.Light);
     },
-    [isDarkMode]
+    [isDarkMode, setValue]
   );
   // modeの変更時にhtmlタグのクラス名を変更
   useEffect(() => {

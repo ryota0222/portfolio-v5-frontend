@@ -12,11 +12,11 @@ const { title, description, url, favicon, thumbnail } = Astro.props;
   class="flex items-center w-full border dark:border-zinc-500 hover:bg-zinc-50 hover:dark:bg-zinc-800 rounded overflow-hidden"
 >
   <div class="p-4 flex-1 overflow-hidden">
-    <h1 class="font-bold text-sm md:text-md">{title}</h1>
-    <div class="text-sm my-2">
+    <h1 class="font-bold text-sm md:text-md text-black dark:text-white">{title}</h1>
+    <div class="text-sm my-2 text-black dark:text-white">
       {description}
     </div>
-    <div class="overflow-hidden text-xs text-ellipsis whitespace-nowrap">
+    <div class="overflow-hidden text-xs text-ellipsis whitespace-nowrap text-black dark:text-white">
       {favicon && <img src={favicon} class="mr-1 inline-block" alt="favicon" width="14" height="14" />}
       {url}
     </div>

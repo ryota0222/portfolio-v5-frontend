@@ -9,6 +9,8 @@ module.exports = {
       },
       fontFamily: {
         rokkitt: ['Rokkitt'],
+        aoharu: ['aoharu'],
+        bodoni: ['Bodoni Moda'],
       },
       backgroundImage: {
         'gradation-clip': "url('/images/gradient.png')",

@@ -1,6 +1,7 @@
 ---
-import Layout from '@/layouts/Layout.astro';
 import MainVisual from '@/features/MainVisual/index.astro';
+import EngineerIntroduction from '@/features/EngineerIntroduction/index.astro';
+import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout url={`${import.meta.env.SITE}`}>
@@ -14,5 +15,6 @@ import MainVisual from '@/features/MainVisual/index.astro';
 			/>
 		</ul> -->
     <MainVisual />
+    <EngineerIntroduction />
   </main>
 </Layout>

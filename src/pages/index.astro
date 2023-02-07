@@ -2,13 +2,15 @@
 import Divider from '@/components/ui/Divider/index.astro';
 import MainVisual from '@/features/MainVisual/index.astro';
 import EngineerIntroduction from '@/features/EngineerIntroduction/index.astro';
+import IllustratorIntroduction from '@/features/IllustratorIntroduction/index.astro';
 import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout url={`${import.meta.env.SITE}`}>
-  <main class="container mx-auto">
+  <main>
     <MainVisual />
     <EngineerIntroduction />
     <Divider />
+    <IllustratorIntroduction />
   </main>
 </Layout>

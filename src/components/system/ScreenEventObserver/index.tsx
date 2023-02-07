@@ -23,7 +23,7 @@ export const ScreenEventObserver: React.FC<PropsWithChildren<Props>> = memo(({ i
         }
       } else if (id === 'engineer') {
         if (targetViewPosition === ScreenMode.BelowViewport && window.location.hash === hash) {
-          history.pushState({}, '', ``);
+          history.pushState({}, '', location.pathname);
         } else if (targetViewPosition === ScreenMode.AboveViewport && window.location.hash === hash) {
           history.pushState({}, '', `#illustrator`);
         }

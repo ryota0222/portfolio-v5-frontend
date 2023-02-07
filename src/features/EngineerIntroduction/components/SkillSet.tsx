@@ -1,5 +1,4 @@
-import React, { memo } from 'react';
-import 'devicon';
+import { memo } from 'react';
 import { useIsDarkMode } from '@/components/ui/ModeToggleButton/hooks/useToggleMode';
 
 export const SkillSet = memo(() => {

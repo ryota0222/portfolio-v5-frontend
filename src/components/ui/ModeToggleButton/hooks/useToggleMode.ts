@@ -1,5 +1,5 @@
 import { useCallback, useEffect } from 'react';
-import { createGlobalState, useLocalStorage } from 'react-use';
+import { createGlobalState } from 'react-use';
 
 import { Mode } from '@/types/global';
 
@@ -20,16 +20,15 @@ const isInitialDark =
 export const useIsDarkMode = createGlobalState<boolean>(isInitialDark);
 
 export const useDarkMode: UseDarkMode = () => {
-  const [_, setValue] = useLocalStorage<Mode>('theme');
   const [isDarkMode, setIsDarkMode] = useIsDarkMode();
   // modeを切り替える
   const toggle = useCallback(
     (isDark?: boolean) => {
       const isNextDarkMode = typeof isDark === 'undefined' ? !isDarkMode : isDark;
       setIsDarkMode(isNextDarkMode);
-      setValue(isNextDarkMode ? Mode.Dark : Mode.Light);
+      localStorage.setItem('theme', isNextDarkMode ? Mode.Dark : Mode.Light);
     },
-    [isDarkMode, setValue]
+    [isDarkMode]
   );
   // modeの変更時にhtmlタグのクラス名を変更
   useEffect(() => {

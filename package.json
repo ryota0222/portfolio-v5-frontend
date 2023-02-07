@@ -59,7 +59,7 @@
     "stylelint-order": "^6.0.1"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,astro}": "yarn lint:es",
+    "*.{js,ts,tsx}": "yarn lint:es",
     "*.{css,scss}": "yarn lint:style",
     "*.{js,ts,scss,md,astro}": "yarn lint:prettier"
   }

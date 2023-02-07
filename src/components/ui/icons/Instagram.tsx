@@ -28,12 +28,12 @@ export const Instagram: React.FC<IconProps> = ({ width = 20, height = 20 }) => {
           y2="19.2563"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#AE3DAE" />
-          <stop offset="0.0468721" stop-color="#B23BA6" />
-          <stop offset="0.1216" stop-color="#BD368E" />
-          <stop offset="0.2148" stop-color="#CE2E69" />
-          <stop offset="0.3216" stop-color="#E62335" />
-          <stop offset="0.418" stop-color="#FF1800" />
+          <stop stopColor="#AE3DAE" />
+          <stop offset="0.0468721" stopColor="#B23BA6" />
+          <stop offset="0.1216" stopColor="#BD368E" />
+          <stop offset="0.2148" stopColor="#CE2E69" />
+          <stop offset="0.3216" stopColor="#E62335" />
+          <stop offset="0.418" stopColor="#FF1800" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_5_246"
@@ -43,15 +43,15 @@ export const Instagram: React.FC<IconProps> = ({ width = 20, height = 20 }) => {
           y2="14.7095"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E12F6A" />
-          <stop offset="0.1705" stop-color="#EA3751" />
-          <stop offset="0.3563" stop-color="#F13D3E" />
-          <stop offset="0.5467" stop-color="#F64133" />
-          <stop offset="0.7469" stop-color="#F7422F" />
-          <stop offset="0.7946" stop-color="#F74C2F" />
-          <stop offset="0.8743" stop-color="#F7652F" />
-          <stop offset="0.9757" stop-color="#F78F2E" />
-          <stop offset="1" stop-color="#F79A2E" />
+          <stop stopColor="#E12F6A" />
+          <stop offset="0.1705" stopColor="#EA3751" />
+          <stop offset="0.3563" stopColor="#F13D3E" />
+          <stop offset="0.5467" stopColor="#F64133" />
+          <stop offset="0.7469" stopColor="#F7422F" />
+          <stop offset="0.7946" stopColor="#F74C2F" />
+          <stop offset="0.8743" stopColor="#F7652F" />
+          <stop offset="0.9757" stopColor="#F78F2E" />
+          <stop offset="1" stopColor="#F79A2E" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_5_246"
@@ -61,10 +61,10 @@ export const Instagram: React.FC<IconProps> = ({ width = 20, height = 20 }) => {
           y2="20.2803"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.2341" stop-color="#9E35A5" stop-opacity="0" />
-          <stop offset="0.4512" stop-color="#D42F7F" stop-opacity="0.5" />
-          <stop offset="0.7524" stop-color="#F7772E" />
-          <stop offset="0.9624" stop-color="#FEF780" />
+          <stop offset="0.2341" stopColor="#9E35A5" stopOpacity="0" />
+          <stop offset="0.4512" stopColor="#D42F7F" stopOpacity="0.5" />
+          <stop offset="0.7524" stopColor="#F7772E" />
+          <stop offset="0.9624" stopColor="#FEF780" />
         </linearGradient>
       </defs>
     </svg>

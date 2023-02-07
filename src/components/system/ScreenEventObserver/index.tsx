@@ -15,17 +15,17 @@ export const ScreenEventObserver: React.FC<PropsWithChildren<Props>> = memo(({ i
     if (targetViewPosition === undefined) return;
     const hash = `#${id}`;
     if (isVisible && window.location.hash !== hash) {
-      window.location.hash = `#${id}`;
+      history.pushState({}, '', `#${id}`);
     } else {
       if (id === 'illustrator') {
         if (window.location.hash === hash) {
-          window.location.hash = `#engineer`;
+          history.pushState({}, '', `#engineer`);
         }
       } else if (id === 'engineer') {
         if (targetViewPosition === ScreenMode.BelowViewport && window.location.hash === hash) {
-          window.location.hash = ``;
+          history.pushState({}, '', ``);
         } else if (targetViewPosition === ScreenMode.AboveViewport && window.location.hash === hash) {
-          window.location.hash = `#illustrator`;
+          history.pushState({}, '', `#illustrator`);
         }
       }
     }

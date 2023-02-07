@@ -2,7 +2,7 @@ import type { IconProps } from './types';
 
 export const Logo: React.FC<IconProps> = ({ width = 20, height = 22, color = 'white' }) => {
   return (
-    <svg width={width} height={height} viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={width} height={height} viewBox="0 0 20 22">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

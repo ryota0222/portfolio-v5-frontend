@@ -1,0 +1,16 @@
+---
+import type { ElementType } from 'react';
+
+interface Props {
+  as?: ElementType;
+  name: string;
+}
+
+const { as, name } = Astro.props;
+
+const CustomTag = as || 'h2';
+---
+
+<CustomTag className="font-rokkitt font-bold text-black dark:text-white text-3xl md:text-4xl lg:text-5xl">
+  I'm <span class="bg-clip-text text-transparent bg-gradation-clip bg-cover">{name}</span>
+</CustomTag>

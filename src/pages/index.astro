@@ -1,4 +1,5 @@
 ---
+import Divider from '@/components/ui/Divider/index.astro';
 import MainVisual from '@/features/MainVisual/index.astro';
 import EngineerIntroduction from '@/features/EngineerIntroduction/index.astro';
 import Layout from '@/layouts/Layout.astro';
@@ -6,15 +7,8 @@ import Layout from '@/layouts/Layout.astro';
 
 <Layout url={`${import.meta.env.SITE}`}>
   <main class="container mx-auto">
-    <!-- 
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul> -->
     <MainVisual />
     <EngineerIntroduction />
+    <Divider />
   </main>
 </Layout>

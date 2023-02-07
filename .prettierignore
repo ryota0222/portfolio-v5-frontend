@@ -4,3 +4,4 @@ node_modules
 *.mjs
 dist
 tsconfig.json
+src/constants/*.json

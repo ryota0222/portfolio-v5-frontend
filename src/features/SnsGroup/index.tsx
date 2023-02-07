@@ -11,7 +11,7 @@ export const SnsGroup = memo(() => {
   return (
     <>
       {/* desktop */}
-      <div className="fixed bottom-10 right-10 md:flex flex-col gap-4 hidden">
+      <div className="fixed bottom-20 right-8 md:flex flex-col gap-4 hidden z-50">
         <div className="rotate-90 h-36W mb-24">
           <span className="text-sm tracking-widest text-neutral-500 dark:text-neutral-300 font-bold relative after:content-[''] after:absolute after:left-full after:top-1/2 after:w-20 after:h-px after:bg-neutral-500 after:dark:bg-neutral-300 after:ml-2">
             SNS
@@ -28,7 +28,7 @@ export const SnsGroup = memo(() => {
         </a>
       </div>
       {/* sp */}
-      <div className=" md:hidden flex-col gap-4 flex flex-col items-center">
+      <div className="md:hidden flex-col gap-4 flex flex-col items-center">
         <span className="mb-4 text-sm tracking-widest text-neutral-500 dark:text-neutral-300 font-bold relative ">
           SNS
         </span>

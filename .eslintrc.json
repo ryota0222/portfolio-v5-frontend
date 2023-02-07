@@ -1,12 +1,19 @@
 {
-  "extends": ["plugin:astro/recommended", "prettier"],
+  "extends": [
+    "plugin:astro/recommended",
+    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "plugins": ["strict-dependencies", "import", "unused-imports"],
   "parserOptions": {
+    "project": "./tsconfig.json",
     "sourceType": "module",
-    "ecmaVersion": 2020
+    "ecmaVersion": 13
   },
   "rules": {
     "unused-imports/no-unused-imports": "error",
+    "@typescript-eslint/no-confusing-void-expression": "off",
     "import/order": [
       "warn",
       {

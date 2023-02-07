@@ -1,0 +1,42 @@
+---
+interface Props {
+  data: {
+    /**
+     * 日時
+     * ex) 2022-12-31
+     */
+    date: string;
+    /**
+     * 概要
+     */
+    description: string;
+    /**
+     * リンク先のURL
+     */
+    link?: string;
+  }[];
+}
+
+const { data } = Astro.props;
+---
+
+<dl class="px-6 py-4 bg-zinc-50 dark:bg-zinc-800 flex flex-col gap-4">
+  {
+    data.map((row) => (
+      <div class="flex gap-4">
+        <dt>
+          <time datetime={row.date}>{row.date}</time>
+        </dt>
+        <dd class="flex-1">
+          {row.link ? (
+            <a href={row.link} target="_blank" rel="noopener noreferrer" class="underline">
+              {row.description}
+            </a>
+          ) : (
+            <>{row.description}</>
+          )}
+        </dd>
+      </div>
+    ))
+  }
+</dl>

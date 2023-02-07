@@ -1,0 +1,18 @@
+---
+import Description from './Description.astro';
+import InstagramWork from './InstagramWork.astro';
+import LINEStickerWork from './LINEStickerWork.astro';
+import Title from './Title.astro';
+import { ScreenEventObserver } from '@/components/system/ScreenEventObserver';
+---
+
+<ScreenEventObserver client:load id="illustrator">
+  <div class="container mx-auto max-w-3xl px-4" id="illustrator">
+    <Title />
+    <div class="max-w-2xl mx-auto my-8">
+      <Description />
+    </div>
+  </div>
+  <InstagramWork />
+  <LINEStickerWork />
+</ScreenEventObserver>

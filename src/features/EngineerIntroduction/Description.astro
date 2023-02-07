@@ -1,0 +1,80 @@
+---
+import EmbedBaseLinkCard from '@/components/ui/EmbedBaseLinkCard/index.astro';
+
+import ChronologicalTable from './components/ChronologicalTable.astro';
+import DescriptionItem from './components/DescriptionItem.astro';
+import { LinkList } from './components/LinkList';
+import { SkillSet } from './components/SkillSet';
+import UnorderListTable from './components/UnorderListTable.astro';
+import { APPLICATION_LIST, SLIDE_LIST } from './constants';
+---
+
+<dl class="flex flex-col gap-8 md:gap-4">
+  <!-- 名前 -->
+  <DescriptionItem title="名前">りょーた</DescriptionItem>
+  <!-- 所属 -->
+  <DescriptionItem title="所属">株式会社ニュートラル{'　'}役員</DescriptionItem>
+  <!-- 説明 -->
+  <DescriptionItem title="説明">
+    ３年間フロントエンドエンジニアとして活動後、デザインエンジニアにキャリアチェンジ
+    フロントエンド全般とデザインに興味があります。作ることが好きで、趣味で様々なWebアプリを作っています。<br />
+    勉強会の運営や、登壇、記事の執筆も行っています。
+  </DescriptionItem>
+  <!-- 経歴 -->
+  <DescriptionItem title="経歴">
+    <ChronologicalTable
+      data={[
+        { date: '2020-03', description: '神戸大学  工学部  機械工学科卒業' },
+        { date: '2020-04', description: '株式会社神戸デジタル・ラボ入社' },
+        { date: '2022-12', description: '株式会社神戸デジタル・ラボ退社' },
+        { date: '2023-01', description: '株式会社ニュートラル入社' },
+      ]}
+    />
+  </DescriptionItem>
+  <!-- 副業 -->
+  <DescriptionItem title="副業">
+    <ChronologicalTable
+      data={[{ date: '2022-03', description: '新規サービスのモックをFigmaで作成する業務委託（2022.05に終了）' }]}
+    />
+  </DescriptionItem>
+  <!-- 活動 -->
+  <DescriptionItem title="活動">
+    <ChronologicalTable
+      data={[
+        { date: '2021-01', description: 'つながる勉強会の運営' },
+        { date: '2022-06', description: 'Web Creators Meetupの運営（2022.12に終了）' },
+        { date: '2022-06', description: 'YouTubeインタビュー', link: 'https://youtu.be/lgsR7iWB9hw' },
+        { date: '2023-02', description: 'ブログ記事インタビュー', link: 'https://sakai-kojiblog.com/interview-no4/' },
+      ]}
+    />
+  </DescriptionItem>
+  <!-- 登壇 -->
+  <DescriptionItem title="登壇">
+    <div class="flex flex-col gap-4 w-full">
+      {SLIDE_LIST.slice(0, 3).map((slide) => <EmbedBaseLinkCard {...slide} />)}
+    </div>
+    <div class="mt-4 flex items-center justify-center">
+      <a
+        href="/slides"
+        class="inline-flex w-48 rounded-full font-bold py-3 bg-dark dark:bg-white justify-center text-white dark:text-black hover:scale-105 transition-transform cursor-pointer"
+        >もっと見る</a
+      >
+    </div>
+  </DescriptionItem>
+  <!-- スキル -->
+  <DescriptionItem title="スキル"><SkillSet client:load /></DescriptionItem>
+  <!-- 資格 -->
+  <DescriptionItem title="資格">
+    <UnorderListTable data={['HTML5プロフェッショナル認定試験レベル1']} />
+  </DescriptionItem>
+  <!-- 制作物 -->
+  <DescriptionItem title="制作物">
+    <div class="flex flex-col gap-4 w-full">
+      {APPLICATION_LIST.map((application) => <EmbedBaseLinkCard {...application} />)}
+    </div>
+  </DescriptionItem>
+  <!-- リンク -->
+  <DescriptionItem title="リンク">
+    <LinkList client:load />
+  </DescriptionItem>
+</dl>

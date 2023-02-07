@@ -3,3 +3,5 @@ node_modules
 .next
 *.mjs
 dist
+tsconfig.json
+src/constants/*.json

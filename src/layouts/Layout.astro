@@ -1,5 +1,8 @@
 ---
 import { TITLE, DESCRIPTION, IMAGE } from '@/constants/meta';
+import Header from '@/features/Header/index.astro';
+import Footer from '@/features/Footer/index.astro';
+import '@/styles/globals.css';
 
 export interface Props {
   title?: string;
@@ -38,10 +41,18 @@ const _title = title ? `${title} - ${TITLE}` : TITLE;
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href={url} />
   </head>
-  <body>
+  <body class="bg-white dark:bg-dark">
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
+
+{
+  /* **********
+TIPS: グローバルなスタイリングは`is:global`をつける
+***************/
+}
 <style is:global>
   :root {
     --accent: 124, 58, 237;
@@ -49,6 +60,18 @@ const _title = title ? `${title} - ${TITLE}` : TITLE;
   }
   html {
     font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
+  }
+  .scroll-animation-icon-wrapper path {
+    stroke: #d4d4d8;
+  }
+
+  html.dark .scroll-animation-icon-wrapper path {
+    stroke: #71717a;
+  }
+  .sns-animation-icon-wrapper path {
+    stroke: #78716c;
+  }
+  html.dark .sns-animation-icon-wrapper path {
+    stroke: #d6d3d1;
   }
 </style>

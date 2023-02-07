@@ -1,0 +1,31 @@
+---
+import type { EmbedBaseLinkCardProps } from './types';
+
+interface Props extends EmbedBaseLinkCardProps {}
+const { title, description, url, favicon, thumbnail } = Astro.props;
+---
+
+<a
+  href={url}
+  rel="noopener noreferrer"
+  target="_blank"
+  class="flex items-center w-full border dark:border-zinc-500 hover:bg-zinc-50 hover:dark:bg-zinc-800 rounded overflow-hidden"
+>
+  <div class="p-4 flex-1 overflow-hidden">
+    <h1 class="font-bold text-sm md:text-md text-black dark:text-white">{title}</h1>
+    <div class="text-sm my-2 text-black dark:text-white">
+      {description}
+    </div>
+    <div class="overflow-hidden text-xs text-ellipsis whitespace-nowrap text-black dark:text-white">
+      {favicon && <img src={favicon} class="mr-1 inline-block" alt="favicon" width="14" height="14" />}
+      {url}
+    </div>
+  </div>
+  {
+    thumbnail && (
+      <div class="h-[90px] max-w-[180px] md:h-[120px] md:max-w-[230px]">
+        <img src={thumbnail} alt={title} class="w-full h-full" />
+      </div>
+    )
+  }
+</a>

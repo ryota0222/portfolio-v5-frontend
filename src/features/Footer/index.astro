@@ -1,0 +1,19 @@
+---
+import { Spacer } from '@/components/system/Spacer';
+import { SnsLink } from './components/SnsLink';
+---
+
+<footer class="p-8 flex items-end md:items-center flex-col md:flex-row">
+  <div class="flex mb-10 md:mb-0 items-end">
+    <span class="text-zinc-400 mr-12">&copy;RyoTa.</span>
+    <img
+      src="/images/vision.svg"
+      width={200}
+      height={24}
+      alt="良い体験を、デザインし、作る"
+      class="brightness-0 dark:brightness-100"
+    />
+  </div>
+  <Spacer />
+  <SnsLink client:load />
+</footer>

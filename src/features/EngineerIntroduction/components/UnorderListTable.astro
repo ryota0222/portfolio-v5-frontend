@@ -1,0 +1,12 @@
+---
+interface Props {
+  data: string[];
+}
+const { data } = Astro.props;
+---
+
+<div class="px-6 py-4 bg-zinc-50 dark:bg-zinc-800 flex flex-col gap-4">
+  <ul class="list-disc ml-4">
+    {data.map((item) => <li>{item}</li>)}
+  </ul>
+</div>

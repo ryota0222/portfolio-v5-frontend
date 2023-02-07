@@ -7,7 +7,7 @@ export const ReferentialMeasurement: React.FC = memo(() => {
     if (isBrowser) {
       const ref = document.referrer;
       console.log(
-        `%参照元%c あなたは%c${ref.length > 0 ? ref : '参照元なし'}%cからきました`,
+        `%c参照元%c あなたは%c${ref.length > 0 ? ref : '参照元なし'}%cからきました`,
         'color:white; background-color:purple; padding:2px; border-radius:4px;',
         '',
         'color:red;',

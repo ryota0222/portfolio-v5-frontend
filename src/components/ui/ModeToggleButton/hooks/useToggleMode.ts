@@ -12,7 +12,7 @@ const theme = localStorage.getItem('theme');
 
 const isInitialDark =
   theme !== null
-    ? JSON.parse(theme) === Mode.dark
+    ? JSON.parse(theme) === Mode.Dark
     : typeof window !== 'undefined'
     ? window.matchMedia('(prefers-color-scheme: dark)').matches
     : false;
@@ -27,7 +27,7 @@ export const useDarkMode: UseDarkMode = () => {
     (isDark?: boolean) => {
       const isNextDarkMode = typeof isDark === 'undefined' ? !isDarkMode : isDark;
       setIsDarkMode(isNextDarkMode);
-      setValue(isNextDarkMode ? Mode.dark : Mode.light);
+      setValue(isNextDarkMode ? Mode.Dark : Mode.Light);
     },
     [isDarkMode, setValue]
   );
@@ -35,8 +35,10 @@ export const useDarkMode: UseDarkMode = () => {
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
+      document.documentElement.style.background = '#333333';
     } else {
       document.documentElement.classList.remove('dark');
+      document.documentElement.style.background = '#FFFFFF';
     }
   }, [isDarkMode]);
 

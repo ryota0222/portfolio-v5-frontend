@@ -23,14 +23,14 @@ const TitleClient = memo(() => {
     return 'RyoTa.';
   }, []);
   const [dynamicText, setDynamicText] = useState(getDynamicText());
-  // ハッシュの変更を検知してタイトルの更新
-  window.addEventListener(
-    'hashchange',
-    () => {
-      setDynamicText(getDynamicText());
-    },
-    false
-  );
+  // スクロールを検知してタイトルの更新
+  const listener: () => void = () => {
+    setDynamicText(getDynamicText());
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', listener);
+    return () => window.removeEventListener('scroll', listener);
+  }, []);
   return (
     <h1 className="font-rokkitt font-bold text-black dark:text-white text-2xl">
       I'm <span className="bg-clip-text text-transparent bg-gradation-clip bg-cover">{dynamicText}</span>

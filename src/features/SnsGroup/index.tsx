@@ -1,10 +1,27 @@
-import { memo } from 'react';
-import githubAnimation from '@/constants/github.json';
-import twitterAnimation from '@/constants/twitter.json';
-import instagramAnimation from '@/constants/instagram.json';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { memo, useEffect, useRef, useState } from 'react';
+
+import githubAnimation from '@/constants/github.json';
+import instagramAnimation from '@/constants/instagram.json';
+import twitterAnimation from '@/constants/twitter.json';
+
+import { useHover } from '@/hooks/useHover';
+
+import type { AnimationItem } from 'lottie-web';
 
 export const SnsGroup = memo(() => {
+  const dtRef = useRef<HTMLSpanElement | null>(null);
+  const spRef = useRef<HTMLSpanElement | null>(null);
+  const [lottieDtRef, setLottieDtRef] = useState<AnimationItem | null>(null);
+  const [lottieSpRef, setLottieSpRef] = useState<AnimationItem | null>(null);
+  const isDtInstagramIconHover = useHover(dtRef);
+  const isSpInstagramIconHover = useHover(spRef);
+  useEffect(() => {
+    if (!isDtInstagramIconHover && lottieDtRef !== null) lottieDtRef.resetSegments(true);
+  }, [isDtInstagramIconHover]);
+  useEffect(() => {
+    if (!isSpInstagramIconHover && lottieSpRef !== null) lottieSpRef.resetSegments(true);
+  }, [isSpInstagramIconHover]);
   return (
     <>
       {/* desktop */}
@@ -20,14 +37,17 @@ export const SnsGroup = memo(() => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Player
-            src={twitterAnimation}
-            style={{
-              height: '32px',
-              width: '32px',
-            }}
-            hover
-          />
+          <span role="img" aria-label="Twitter">
+            <Player
+              src={twitterAnimation}
+              style={{
+                height: '32px',
+                width: '32px',
+              }}
+              hover
+              loop
+            />
+          </span>
         </a>
         <a
           className="sns-animation-icon-wrapper"
@@ -35,14 +55,17 @@ export const SnsGroup = memo(() => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Player
-            src={githubAnimation}
-            style={{
-              height: '32px',
-              width: '32px',
-            }}
-            hover
-          />
+          <span role="img" aria-label="GitHub">
+            <Player
+              src={githubAnimation}
+              style={{
+                height: '32px',
+                width: '32px',
+              }}
+              hover
+              loop
+            />
+          </span>
         </a>
         <a
           className="sns-animation-icon-wrapper"
@@ -50,14 +73,20 @@ export const SnsGroup = memo(() => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Player
-            src={instagramAnimation}
-            style={{
-              height: '32px',
-              width: '32px',
-            }}
-            hover
-          />
+          <span role="img" aria-label="Instagram" ref={dtRef}>
+            <Player
+              src={instagramAnimation}
+              lottieRef={(instance) => {
+                setLottieDtRef(instance);
+              }}
+              style={{
+                height: '32px',
+                width: '32px',
+              }}
+              hover
+              keepLastFrame
+            />
+          </span>
         </a>
       </div>
       {/* sp */}
@@ -72,14 +101,17 @@ export const SnsGroup = memo(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Player
-              src={twitterAnimation}
-              style={{
-                height: '32px',
-                width: '32px',
-              }}
-              hover
-            />
+            <span role="img" aria-label="Twitter">
+              <Player
+                src={twitterAnimation}
+                style={{
+                  height: '32px',
+                  width: '32px',
+                }}
+                hover
+                loop
+              />
+            </span>
           </a>
           <a
             className="sns-animation-icon-wrapper"
@@ -87,14 +119,17 @@ export const SnsGroup = memo(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Player
-              src={githubAnimation}
-              style={{
-                height: '32px',
-                width: '32px',
-              }}
-              hover
-            />
+            <span role="img" aria-label="Twitter">
+              <Player
+                src={githubAnimation}
+                style={{
+                  height: '32px',
+                  width: '32px',
+                }}
+                hover
+                loop
+              />
+            </span>
           </a>
           <a
             className="sns-animation-icon-wrapper"
@@ -102,14 +137,20 @@ export const SnsGroup = memo(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Player
-              src={instagramAnimation}
-              style={{
-                height: '32px',
-                width: '32px',
-              }}
-              hover
-            />
+            <span role="img" aria-label="Instagram" ref={spRef}>
+              <Player
+                lottieRef={(instance) => {
+                  setLottieSpRef(instance);
+                }}
+                src={instagramAnimation}
+                style={{
+                  height: '32px',
+                  width: '32px',
+                }}
+                hover
+                keepLastFrame
+              />
+            </span>
           </a>
         </div>
       </div>

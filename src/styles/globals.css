@@ -3,4 +3,5 @@
 @font-face {
   font-family: aoharu;
   src: url('/fonts/aoharu-marker-mini.otf');
+  font-display: swap;
 }

@@ -111,5 +111,5 @@
       }
     }
   ],
-  "ignorePatterns": ["src/env.d.ts"]
+  "ignorePatterns": ["src/env.d.ts", "src/misc/util.ts"]
 }

@@ -1,4 +1,9 @@
-<img src="/images/illustrator-introduction.png" alt="飛ばないペンギン" class="w-full" />
+---
+import { Image } from '@astrojs/image/components';
+import IIImage from '../../../public/images/illustrator-introduction.png';
+---
+
+<Image src={IIImage} alt="飛ばないペンギン" class="w-full" width={1200} height={400} aspectRatio={3 / 1} />
 <p class="text-black dark:text-white mt-8">
   ryotannyという名前で「飛ばないペンギン」というキャラクターのイラストを描いています。<br />
   イラストは

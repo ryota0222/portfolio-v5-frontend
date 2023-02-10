@@ -4,7 +4,7 @@ export const Introduction = memo(() => {
   return (
     <div className="flex items-center">
       <img
-        src="/images/profile.jpg"
+        src="/images/profile.JPG"
         alt="RyoTa"
         className="w-[64px] h-[64px] rounded-full mr-4 md:mr-8 md:w-[96px] md:h-[96px] lg:w-[120px] lg:h-[120px] object-cover"
       />

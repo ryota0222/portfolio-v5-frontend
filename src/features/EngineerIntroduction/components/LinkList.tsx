@@ -60,7 +60,7 @@ export const LinkList = memo(() => {
         <dd aria-label="つながる勉強会" title="つながる勉強会">
           <a href="https://www.notion.so/31469dcb91b245d1b5e1de8e0e4b3b4b" target="_blank" rel="noopener noreferrer">
             <span role="img" aria-label="つながる勉強会">
-              <img src="/images/tsunagaru.png" alt="つながる勉強会" width={32} height={32} />
+              <img src="/images/tsunagaru.png" alt="つながる勉強会" width={32} height={32} loading="lazy" />
             </span>
           </a>
         </dd>

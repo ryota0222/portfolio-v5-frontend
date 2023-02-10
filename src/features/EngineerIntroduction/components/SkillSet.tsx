@@ -1,4 +1,5 @@
 import { memo } from 'react';
+
 import { useIsDarkMode } from '@/components/ui/ModeToggleButton/hooks/useToggleMode';
 
 export const SkillSet = memo(() => {
@@ -16,6 +17,7 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
             className="w-8 h-8"
             alt="TypeScript"
+            loading="lazy"
           />
         </dd>
         {/* React.js */}
@@ -24,6 +26,7 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
             className="w-8 h-8"
             alt="React.js"
+            loading="lazy"
           />
         </dd>
         {/* Next.js */}
@@ -41,6 +44,7 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
             className="w-8 h-8"
             alt="Vue.js"
+            loading="lazy"
           />
         </dd>
         {/* Nuxt.js */}
@@ -49,6 +53,7 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg"
             className="w-8 h-8"
             alt="Nuxt.js"
+            loading="lazy"
           />
         </dd>
         {/* Astro */}
@@ -89,11 +94,11 @@ export const SkillSet = memo(() => {
         </dd>
         {/* React Native */}
         <dd aria-label="React Native" title="React Native">
-          <img src="/images/skills/react-native.svg" className="w-8 h-8" alt="React Native" />
+          <img src="/images/skills/react-native.svg" className="w-8 h-8" alt="React Native" loading="lazy" />
         </dd>
         {/* Redux Toolkit */}
         <dd aria-label="Redux Toolkit" title="Redux Toolkit">
-          <img src="/images/skills/redux-toolkit.svg" className="w-8 h-8" alt="Redux Toolkit" />
+          <img src="/images/skills/redux-toolkit.svg" className="w-8 h-8" alt="Redux Toolkit" loading="lazy" />
         </dd>
         {/* SWR */}
         <dd aria-label="SWR" title="SWR">
@@ -106,7 +111,7 @@ export const SkillSet = memo(() => {
         </dd>
         {/* React Query */}
         <dd aria-label="React Query" title="React Query">
-          <img src="/images/skills/react-query.svg" className="w-8 h-8" alt="React Query" />
+          <img src="/images/skills/react-query.svg" className="w-8 h-8" alt="React Query" loading="lazy" />
         </dd>
         {/* Storybook */}
         <dd aria-label="Storybook" title="Storybook">
@@ -114,6 +119,7 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg"
             className="w-8 h-8"
             alt="Storybook"
+            loading="lazy"
           />
         </dd>
         {/* Sentry */}
@@ -135,6 +141,7 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
             className="w-8 h-8"
             alt="Node.js"
+            loading="lazy"
           />
         </dd>
         {/* Express */}
@@ -152,6 +159,7 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg"
             className="w-8 h-8"
             alt="Nest.js"
+            loading="lazy"
           />
         </dd>
         {/* Python */}
@@ -160,6 +168,7 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
             className="w-8 h-8"
             alt="Python"
+            loading="lazy"
           />
         </dd>
         {/* Flask */}
@@ -177,15 +186,15 @@ export const SkillSet = memo(() => {
       <div className="flex gap-4 flex-wrap">
         {/* Firebase */}
         <dd aria-label="Firebase" title="Firebase">
-          <img src="/images/skills/firebase.svg" className="w-8 h-8" alt="Firebase" />
+          <img src="/images/skills/firebase.svg" className="w-8 h-8" alt="Firebase" loading="lazy" />
         </dd>
         {/* Supabase */}
         <dd aria-label="Supabase" title="Supabase">
-          <img src="/images/skills/supabase.svg" className="w-8 h-8" alt="Supabase" />
+          <img src="/images/skills/supabase.svg" className="w-8 h-8" alt="Supabase" loading="lazy" />
         </dd>
         {/* Contentful */}
         <dd aria-label="Contentful" title="Contentful">
-          <img src="/images/skills/contentful.svg" className="w-8 h-8" alt="Contentful" />
+          <img src="/images/skills/contentful.svg" className="w-8 h-8" alt="Contentful" loading="lazy" />
         </dd>
         {/* microCMS */}
         <dd aria-label="microCMS" title="microCMS">
@@ -204,11 +213,17 @@ export const SkillSet = memo(() => {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
             className="w-8 h-8"
             alt="Figma"
+            loading="lazy"
           />
         </dd>
         {/* XD */}
         <dd aria-label="XD" title="XD">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" className="w-8 h-8" alt="XD" />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg"
+            className="w-8 h-8"
+            alt="XD"
+            loading="lazy"
+          />
         </dd>
       </div>
     </dl>

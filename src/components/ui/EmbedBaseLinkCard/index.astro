@@ -1,5 +1,6 @@
 ---
 import type { EmbedBaseLinkCardProps } from './types';
+import { Image } from '@astrojs/image/components';
 
 interface Props extends EmbedBaseLinkCardProps {}
 const { title, description, url, favicon, thumbnail } = Astro.props;
@@ -17,14 +18,14 @@ const { title, description, url, favicon, thumbnail } = Astro.props;
       {description}
     </div>
     <div class="overflow-hidden text-xs text-ellipsis whitespace-nowrap text-black dark:text-white">
-      {favicon && <img src={favicon} class="mr-1 inline-block" alt="favicon" width="14" height="14" />}
+      {favicon && <img src={favicon} class="mr-1 inline-block" alt="favicon" width={14} height={14} loading="lazy" />}
       {url}
     </div>
   </div>
   {
     thumbnail && (
-      <div class="h-[90px] max-w-[180px] md:h-[120px] md:max-w-[230px]">
-        <img src={thumbnail} alt={title} class="w-full h-full" />
+      <div class="h-[90px] max-w-[180px] md:h-[120px] md:max-w-[230px] hidden md:block">
+        <Image src={thumbnail} alt={title} class="w-full h-full" width={230} height={120} format="png" />
       </div>
     )
   }

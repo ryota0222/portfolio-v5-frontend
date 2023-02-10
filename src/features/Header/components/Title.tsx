@@ -28,7 +28,7 @@ const TitleClient = memo(() => {
     setDynamicText(getDynamicText());
   };
   useEffect(() => {
-    window.addEventListener('scroll', listener);
+    window.addEventListener('scroll', listener, { passive: true });
     return () => window.removeEventListener('scroll', listener);
   }, []);
   return (

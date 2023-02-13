@@ -18,10 +18,9 @@ jobs:
           pip install datetime
           pip install requests
       - name: run python
-        working-directory: ./src/scripts
         run: |
-          python pageSpeedInsight.py　
-          mv *.json ./../../public/data/psi/
+          python ./src/scripts/pageSpeedInsight.py　
+          mv ./src/scripts/*.json ./public/data/psi/
       - name: commit files
         run: |
           git config --global user.name "${{ github.actor }}"

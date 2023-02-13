@@ -23,8 +23,8 @@ jobs:
           pip install requests
       - name: run python
         run: |
-          python src/scripts/pageSpeedInsight.py　
-          mv src/scripts/*.json public/data/psi/
+          python ./src/scripts/pageSpeedInsight.py　
+          mv ./src/scripts/*.json public/data/psi/
       - name: commit files
         run: |
           git config --global user.name "${{ github.actor }}"

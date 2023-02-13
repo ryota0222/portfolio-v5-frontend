@@ -13,8 +13,8 @@ export const useHover: UseHover = (ref, enabled = true) => {
     const onMouseOut = (): void => setValue(false);
 
     if (enabled && ref.current != null) {
-      on(ref.current, 'mouseover', onMouseOver);
-      on(ref.current, 'mouseout', onMouseOut);
+      on(ref.current, 'mouseover', onMouseOver, { passive: true });
+      on(ref.current, 'mouseout', onMouseOut, { passive: true });
     }
 
     // fixes react-hooks/exhaustive-deps warning about stale ref elements

@@ -27,7 +27,7 @@ jobs:
           pip install requests
       - name: run python
         run: |
-          python ${{ env.DEVOPS_DIR }}/src/scripts/pageSpeedInsight.py　
+          python ${{ env.DEVOPS_DIR }}/src/scripts/pageSpeedInsight.py
           mv ${{ env.DEVOPS_DIR }}/src/scripts/*.json public/data/psi/
       - name: commit files
         run: |

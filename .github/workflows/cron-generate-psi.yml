@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository content
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           repository: ryota0222/portfolio-v5
           token: ${{ secrets.GITHUB_TOKEN }}

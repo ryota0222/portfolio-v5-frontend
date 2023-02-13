@@ -18,7 +18,7 @@ jobs:
           pip install datetime
           pip install requests
       - name: run python
-        working-directory: src/scripts
+        working-directory: ./src/scripts
         run: |
           python pageSpeedInsight.py　
           mv *.json ./../../public/data/psi/

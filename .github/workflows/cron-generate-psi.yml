@@ -25,7 +25,7 @@ jobs:
         working-directory: scripts
         run: |
           python pageSpeedInsight.py
-          mv *.json ./../../public/data/psi/
+          mv *.json ./../public/data/psi/
       - name: commit files
         run: |
           git config --global user.name "${{ github.actor }}"

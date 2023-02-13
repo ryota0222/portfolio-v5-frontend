@@ -1,10 +1,10 @@
 import datetime
 import requests
 import json
-from pathlib import Path
 
 # filename
-date = datetime.datetime.now()
+DIFF_JST_FROM_UTC = 9
+date = datetime.datetime.now() + datetime.timedelta(hours=DIFF_JST_FROM_UTC)
 today = "{:%Y-%m-%d}".format(date)
 filename = today + '.json'
 

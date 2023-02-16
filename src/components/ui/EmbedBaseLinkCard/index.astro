@@ -1,8 +1,9 @@
 ---
-import type { EmbedBaseLinkCardProps } from './types';
 import { Image } from '@astrojs/image/components';
 
-interface Props extends EmbedBaseLinkCardProps {}
+import type { EmbedBaseLinkCardProps } from './types';
+
+type Props = EmbedBaseLinkCardProps;
 const { title, description, url, favicon, thumbnail } = Astro.props;
 ---
 

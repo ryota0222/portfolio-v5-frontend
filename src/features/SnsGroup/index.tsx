@@ -119,7 +119,7 @@ export const SnsGroup = memo(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span role="img" aria-label="Twitter">
+            <span role="img" aria-label="Instagram">
               <Player
                 src={githubAnimation}
                 style={{

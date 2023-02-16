@@ -18,40 +18,33 @@ export const LinkList = memo(() => {
         <dt className="visibility-hidden">リンク一覧</dt>
         <div className="flex justify-evenly flex-wrap">
           {/* Twitter */}
-          <dd title="Twitter">
-            <div aria-label="Twitter" className="h-full">
+          <dd title="Twitter" aria-label="Twitter">
+            <div className="h-full">
               <a
                 href="https://twitter.com/RyoTa___0222"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block h-full"
-                aria-label="Twitter"
               >
-                <span role="img" className="flex items-center justify-center h-full">
+                <span role="img" aria-label="Twitter" className="flex items-center justify-center h-full">
                   <Twitter color="#1DA1F2" />
                 </span>
               </a>
             </div>
           </dd>
           {/* GitHub */}
-          <dd title="GitHub">
-            <div aria-label="GitHub" className="h-full">
-              <a
-                href="https://github.com/ryota0222"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block h-full"
-                aria-label="Twitter"
-              >
-                <span role="img" className="flex items-center justify-center h-full">
+          <dd title="GitHub" aria-label="GitHub">
+            <div className="h-full">
+              <a href="https://github.com/ryota0222" target="_blank" rel="noopener noreferrer" className="block h-full">
+                <span role="img" aria-label="GitHub" className="flex items-center justify-center h-full">
                   <GitHub color={isDarkMode ? '#FFF' : '#222'} />
                 </span>
               </a>
             </div>
           </dd>
           {/* Qiita */}
-          <dd title="Qiita">
-            <div aria-label="Qiita" className="h-full">
+          <dd title="Qiita" aria-label="Qiita">
+            <div className="h-full">
               <a href="https://qiita.com/RyoTa_0222" target="_blank" rel="noopener noreferrer" className="block h-full">
                 <span role="img" aria-label="Qiita" className="flex items-center justify-center h-full">
                   <Qiita color={isDarkMode ? '#FFF' : '#000'} />
@@ -76,8 +69,8 @@ export const LinkList = memo(() => {
             </a>
           </dd>
           {/* つながる勉強会 */}
-          <dd title="つながる勉強会">
-            <div aria-label="つながる勉強会" className="h-full">
+          <dd title="つながる勉強会" aria-label="つながる勉強会">
+            <div className="h-full">
               <a
                 href="https://www.notion.so/31469dcb91b245d1b5e1de8e0e4b3b4b"
                 target="_blank"

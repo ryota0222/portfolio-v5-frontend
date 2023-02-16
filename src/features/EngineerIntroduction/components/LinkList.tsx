@@ -25,6 +25,7 @@ export const LinkList = memo(() => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block h-full"
+                aria-label="Twitter"
               >
                 <span role="img" className="flex items-center justify-center h-full">
                   <Twitter color="#1DA1F2" />
@@ -35,7 +36,13 @@ export const LinkList = memo(() => {
           {/* GitHub */}
           <dd title="GitHub">
             <div aria-label="GitHub" className="h-full">
-              <a href="https://github.com/ryota0222" target="_blank" rel="noopener noreferrer" className="block h-full">
+              <a
+                href="https://github.com/ryota0222"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+                aria-label="Twitter"
+              >
                 <span role="img" className="flex items-center justify-center h-full">
                   <GitHub color={isDarkMode ? '#FFF' : '#222'} />
                 </span>

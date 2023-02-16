@@ -5,7 +5,7 @@ export const Title = memo(() => {
   useEffect(() => setIsSSR(false), []);
   if (isSSR)
     return (
-      <h1 className="font-rokkitt font-bold text-black dark:text-white text-2xl" alia-label={`I'm Ryota`}>
+      <h1 className="font-rokkitt font-bold text-black dark:text-white text-2xl" alia-label={`I'm りょーた`}>
         I'm <span className="bg-clip-text text-transparent bg-gradation-clip bg-cover">RyoTa.</span>
       </h1>
     );

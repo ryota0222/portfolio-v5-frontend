@@ -12,7 +12,7 @@ export const Introduction = memo(() => {
       <div>
         <span
           className="font-rokkitt font-bold text-black dark:text-white text-3xl md:text-5xl lg:text-6xl"
-          alia-label={`I'm Ryota`}
+          alia-label={`I'm りょーた`}
         >
           I'm <span className="bg-clip-text text-transparent bg-gradation-clip bg-cover">RyoTa.</span>
         </span>

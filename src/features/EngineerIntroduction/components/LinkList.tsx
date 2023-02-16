@@ -15,55 +15,73 @@ export const LinkList = memo(() => {
         {isDarkMode ? 'dark' : 'light'}
       </span>
       <dl className="px-6 py-4 bg-zinc-50 dark:bg-zinc-800 flex flex-col">
-        <dt className="invisible h-0">リンク一覧</dt>
+        <dt className="visibility-hidden">リンク一覧</dt>
         <div className="flex justify-evenly flex-wrap">
           {/* Twitter */}
-          <dd aria-label="Twitter" title="Twitter">
-            <a href="https://twitter.com/RyoTa___0222" target="_blank" rel="noopener noreferrer">
-              <span role="img" aria-label="Twitter">
-                <Twitter color="#1DA1F2" />
-              </span>
-            </a>
+          <dd title="Twitter">
+            <div aria-label="Twitter" className="h-full">
+              <a
+                href="https://twitter.com/RyoTa___0222"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <span role="img" className="flex items-center justify-center h-full">
+                  <Twitter color="#1DA1F2" />
+                </span>
+              </a>
+            </div>
           </dd>
           {/* GitHub */}
-          <dd aria-label="GitHub" title="GitHub">
-            <a href="https://github.com/ryota0222" target="_blank" rel="noopener noreferrer">
-              <span role="img" aria-label="GitHub">
-                <GitHub color={isDarkMode ? '#FFF' : '#222'} />
-              </span>
-            </a>
+          <dd title="GitHub">
+            <div aria-label="GitHub" className="h-full">
+              <a href="https://github.com/ryota0222" target="_blank" rel="noopener noreferrer" className="block h-full">
+                <span role="img" className="flex items-center justify-center h-full">
+                  <GitHub color={isDarkMode ? '#FFF' : '#222'} />
+                </span>
+              </a>
+            </div>
           </dd>
           {/* Qiita */}
-          <dd aria-label="Qiita" title="Qiita">
-            <a href="https://qiita.com/RyoTa_0222" target="_blank" rel="noopener noreferrer">
-              <span role="img" aria-label="Qiita">
-                <Qiita color={isDarkMode ? '#FFF' : '#000'} />
-              </span>
-            </a>
+          <dd title="Qiita">
+            <div aria-label="Qiita" className="h-full">
+              <a href="https://qiita.com/RyoTa_0222" target="_blank" rel="noopener noreferrer" className="block h-full">
+                <span role="img" aria-label="Qiita" className="flex items-center justify-center h-full">
+                  <Qiita color={isDarkMode ? '#FFF' : '#000'} />
+                </span>
+              </a>
+            </div>
           </dd>
           {/* Zenn */}
           <dd aria-label="Zenn" title="Zenn">
-            <a href="https://zenn.dev/ryota0222" target="_blank" rel="noopener noreferrer">
-              <span role="img" aria-label="Zenn">
+            <a href="https://zenn.dev/ryota0222" target="_blank" rel="noopener noreferrer" className="block h-full">
+              <span role="img" aria-label="Zenn" className="flex items-center justify-center h-full">
                 <Zenn />
               </span>
             </a>
           </dd>
           {/* Note */}
           <dd aria-label="Note" title="Note">
-            <a href="https://note.com/ryotanny" target="_blank" rel="noopener noreferrer">
-              <span role="img" aria-label="Note">
+            <a href="https://note.com/ryotanny" target="_blank" rel="noopener noreferrer" className="block h-full">
+              <span role="img" aria-label="Note" className="flex items-center justify-center h-full">
                 <Note color={isDarkMode ? '#FFF' : '#000'} />
               </span>
             </a>
           </dd>
           {/* つながる勉強会 */}
-          <dd aria-label="つながる勉強会" title="つながる勉強会">
-            <a href="https://www.notion.so/31469dcb91b245d1b5e1de8e0e4b3b4b" target="_blank" rel="noopener noreferrer">
-              <span role="img" aria-label="つながる勉強会">
-                <img src="/images/tsunagaru.png" alt="つながる勉強会" width={32} height={32} loading="lazy" />
-              </span>
-            </a>
+          <dd title="つながる勉強会">
+            <div aria-label="つながる勉強会" className="h-full">
+              <a
+                href="https://www.notion.so/31469dcb91b245d1b5e1de8e0e4b3b4b"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <span role="img" aria-label="つながる勉強会" className="flex items-center justify-center h-full">
+                  <img src="/images/tsunagaru.png" alt="つながる勉強会" width={32} height={32} loading="lazy" />
+                </span>
+              </a>
+            </div>
           </dd>
         </div>
       </dl>

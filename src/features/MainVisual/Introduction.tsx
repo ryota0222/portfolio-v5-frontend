@@ -10,7 +10,10 @@ export const Introduction = memo(() => {
         loading="lazy"
       />
       <div>
-        <span className="font-rokkitt font-bold text-black dark:text-white text-3xl md:text-5xl lg:text-6xl">
+        <span
+          className="font-rokkitt font-bold text-black dark:text-white text-3xl md:text-5xl lg:text-6xl"
+          alia-label={`I'm りょーた`}
+        >
           I'm <span className="bg-clip-text text-transparent bg-gradation-clip bg-cover">RyoTa.</span>
         </span>
         <div className="font-rokkitt text-zinc-500 dark:text-zinc-400 font-bold text-md md:text-xl lg:text-2xl">

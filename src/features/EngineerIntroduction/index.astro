@@ -2,6 +2,7 @@
 import Description from './Description.astro';
 import Title from './Title.astro';
 import { ScreenEventObserver } from '@/components/system/ScreenEventObserver';
+import { PerformanceReport } from '../PerformanceReport';
 ---
 
 <ScreenEventObserver client:load id="engineer">
@@ -10,5 +11,6 @@ import { ScreenEventObserver } from '@/components/system/ScreenEventObserver';
     <div class="mt-8 md:mt-20 mx-auto max-w-2xl flex flex-col gap-2">
       <Description />
     </div>
+    <PerformanceReport client:load />
   </div>
 </ScreenEventObserver>

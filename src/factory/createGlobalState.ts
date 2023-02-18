@@ -1,14 +1,11 @@
 import { useState } from 'react';
-import { IHookStateInitAction, IHookStateSetAction, resolveHookState } from '@/misc/hookState';
+
 import { useEffectOnce } from '@/hooks/useEffectOnce';
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect';
 
-export function createGlobalState<S = any>(
-  initialState: IHookStateInitAction<S>
-): () => [S, (state: IHookStateSetAction<S>) => void];
-export function createGlobalState<S = undefined>(): () => [S, (state: IHookStateSetAction<S>) => void];
+import { type IHookStateSetAction, resolveHookState } from '@/misc/hookState';
 
-export function createGlobalState<S>(initialState?: S) {
+export function createGlobalState<S = undefined>(initialState?: S): any {
   const store: {
     state: S;
     setState: (state: IHookStateSetAction<S>) => void;

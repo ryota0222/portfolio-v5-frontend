@@ -13,12 +13,12 @@ module.exports = {
         bodoni: ['Bodoni Moda'],
       },
       backgroundImage: {
-        'gradation-clip': "url('/images/gradient.png')",
+        'gradation-clip': "url('/images/gradient.webp')",
       },
       height: {
         'full-dvh': '100dvh',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

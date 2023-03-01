@@ -6,28 +6,28 @@ export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
     title: '転職活動が終わった話',
     description: '2022-10-22',
     favicon: 'https://static.figma.com/app/icon/1/favicon.png',
-    thumbnail: '/images/slides/2022-10-22.png',
+    thumbnail: '/images/slides/2022-10-22.webp',
   },
   {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FcSvUahcxaXv6ljPa0GnRVK%2FWCM%3Fpage-id%3D304%253A106%26node-id%3D304%253A126%26viewport%3D791%252C166%252C0.16%26scaling%3Dscale-down%26starting-point-node-id%3D304%253A126%26hotspot-hints%3D0',
     title: 'デザインエンジニアってなんやねん??',
     description: '2022-06-25',
     favicon: 'https://static.figma.com/app/icon/1/favicon.png',
-    thumbnail: '/images/slides/2022-06-25.png',
+    thumbnail: '/images/slides/2022-06-25.webp',
   },
   {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FcSvUahcxaXv6ljPa0GnRVK%2FWCM%3Fpage-id%3D38%253A2%26node-id%3D38%253A3%26viewport%3D465%252C559%252C0.09%26scaling%3Dcontain%26starting-point-node-id%3D38%253A3',
     title: '良いデザインって??',
     description: '2022-06-04',
     favicon: 'https://static.figma.com/app/icon/1/favicon.png',
-    thumbnail: '/images/slides/2022-06-04.png',
+    thumbnail: '/images/slides/2022-06-04.webp',
   },
   {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FYMVaY2koGrP1fugOirBLe3%2F%25E3%2581%25A4%25E3%2581%25AA%25E3%2581%258C%25E3%2582%258B%25E5%258B%2589%25E5%25BC%25B7%25E4%25BC%259A%3Fpage-id%3D202%253A1608%26node-id%3D202%253A1609%26viewport%3D838%252C456%252C0.11%26scaling%3Dcontain%26starting-point-node-id%3D202%253A1609',
     title: 'タイムキーパーについて考えてみた',
     description: '2022-05-21',
     favicon: 'https://static.figma.com/app/icon/1/favicon.png',
-    thumbnail: '/images/slides/2022-05-21.png',
+    thumbnail: '/images/slides/2022-05-21.webp',
   },
   {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FYMVaY2koGrP1fugOirBLe3%2F%25E3%2581%25A4%25E3%2581%25AA%25E3%2581%258C%25E3%2582%258B%25E5%258B%2589%25E5%25BC%25B7%25E4%25BC%259A%3Fpage-id%3D201%253A2%26node-id%3D201%253A3%26viewport%3D713%252C632%252C0.13%26scaling%3Dcontain%26starting-point-node-id%3D201%253A3',
@@ -55,7 +55,7 @@ export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
     title: 'Figmaがエンジニアに最適だと思う話',
     description: '2021-11-27',
     favicon: 'https://static.figma.com/app/icon/1/favicon.png',
-    thumbnail: '/images/slides/2022-11-27.png',
+    thumbnail: '/images/slides/2022-11-27.webp',
   },
 ];
 

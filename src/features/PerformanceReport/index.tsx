@@ -56,7 +56,7 @@ export const PerformanceReport = memo(() => {
               )}
             </div>
             <div className="max-w-[200px] md:max-w-[140px] mx-auto">
-              <p className="font-bold mt-2 text-center text-black dark:text-white">Score</p>
+              <p className="font-bold mt-2 text-center text-black dark:text-white">SEO</p>
               <Doughnut data={getChartData(seoData?.score ?? 0)} />
               {Boolean(seoData?.score) && (
                 <span className="font-bold mt-2 text-center text-black dark:text-white block text-2xl">

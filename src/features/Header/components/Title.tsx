@@ -32,7 +32,10 @@ const TitleClient = memo(() => {
     return () => window.removeEventListener('scroll', listener);
   }, []);
   return (
-    <h1 className="font-rokkitt font-bold text-black dark:text-white text-2xl" alia-label={`I'm ${dynamicText}`}>
+    <h1
+      className="font-rokkitt font-bold text-black dark:text-white text-xl md:text-2xl"
+      alia-label={`I'm ${dynamicText}`}
+    >
       I'm <span className="bg-clip-text text-transparent bg-gradation-clip bg-cover">{dynamicText}</span>
     </h1>
   );

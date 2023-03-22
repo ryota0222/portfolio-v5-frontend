@@ -26,7 +26,7 @@ export const ModeToggleButton = memo(() => {
   return (
     <button
       onClick={() => toggle()}
-      className="w-12 h-12 rounded border border-slate-300 dark:border-slate-400 overflow-hidden bg-white dark:bg-dark relative hover:scale-105 transition-transform"
+      className="w-8 h-8 md:w-12 md:h-12 rounded border border-slate-300 dark:border-slate-400 overflow-hidden bg-white dark:bg-dark relative hover:scale-105 transition-transform"
       aria-label="change Mode"
     >
       <Player

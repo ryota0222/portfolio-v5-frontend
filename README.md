@@ -1,3 +1,5 @@
+[![Fetch Releases](https://github.com/ryota0222/portfolio-v5/actions/workflows/fetch-releases.yml/badge.svg)](https://github.com/ryota0222/portfolio-v5/actions/workflows/fetch-releases.yml)
+
 # Astro Starter Kit: Basics
 
 ```

@@ -1,5 +1,7 @@
 [![Fetch Releases](https://github.com/ryota0222/portfolio-v5/actions/workflows/fetch-releases.yml/badge.svg)](https://github.com/ryota0222/portfolio-v5/actions/workflows/fetch-releases.yml)
 
+[![Generate PageSpeed Insights report](https://github.com/ryota0222/portfolio-v5/actions/workflows/cron-generate-psi.yml/badge.svg)](https://github.com/ryota0222/portfolio-v5/actions/workflows/cron-generate-psi.yml)
+
 # Astro Starter Kit: Basics
 
 ```

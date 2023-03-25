@@ -1,4 +1,4 @@
-name: Fetch Releases
+name: Fetch Assets
 
 on:
   schedule:

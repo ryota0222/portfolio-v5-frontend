@@ -1,0 +1,15 @@
+---
+import type { ElementType } from 'react';
+
+interface Props {
+  as?: ElementType;
+}
+
+const { as } = Astro.props;
+
+const CustomTag = as || 'h2';
+---
+
+<CustomTag class="text-center text-3xl md:text-4xl font-bold color-black dark:text-white mb-16 mt-16 font-rokkitt">
+  <slot />
+</CustomTag>

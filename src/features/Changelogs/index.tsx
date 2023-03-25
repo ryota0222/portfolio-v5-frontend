@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, Fragment } from 'react';
 
 import { ChangelogItem } from '../ChangelogItem';
 
@@ -9,12 +9,14 @@ export const Changelogs = memo(() => {
   return (
     <ul>
       {releaseData.map((item) => (
-        <ChangelogItem
-          title={`${item.tag_name} ${item.name}`}
-          createdAt={item.created_at}
-          detail={item.body}
-          url={item.html_url}
-        />
+        <Fragment key={item.id}>
+          <ChangelogItem
+            title={`${item.tag_name} ${item.name}`}
+            createdAt={item.created_at}
+            detail={item.body}
+            url={item.html_url}
+          />
+        </Fragment>
       ))}
     </ul>
   );

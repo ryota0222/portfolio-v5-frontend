@@ -5,3 +5,4 @@ node_modules
 dist
 tsconfig.json
 src/constants/*.json
+src/data/**/*.json

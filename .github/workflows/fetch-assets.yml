@@ -30,11 +30,13 @@ jobs:
         run: npm install
       - name: Fetch RSS Feeds
         run: npm run fetch-assets
-      - name: commit file
-        working-directory: src
+      - name: Commit files
         run: |
-          git config --global user.name "${{ github.actor }}"
+          git config --local user.email "action@github.com"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git add .
-          git commit -m 'update rss.json'
-          git push origin main
+          STATUS=$(git status -s)
+          if [ -n "$STATUS" ]; then
+            git commit -m "Update rss.json `date +'%Y-%m-%d %H:%M:%S'`" -a
+            git push origin main
+          fi

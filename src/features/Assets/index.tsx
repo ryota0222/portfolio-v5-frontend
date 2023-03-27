@@ -1,33 +1,45 @@
 import { Tab } from '@headlessui/react';
 import { memo, useEffect, useState } from 'react';
 
+import { SLIDE_LIST } from '../EngineerIntroduction/constants';
+
 import { AssetLinkCard } from './components/AssetLinkCard';
+import { getIndexFromHash, capitalize, classNames, isAsset } from './functions/utils';
 import { useAssetData } from './hooks/useAssetData';
 
 import type { AssetDataList } from './types';
 
-const classNames = (...classes: string[]): string => {
-  return classes.filter(Boolean).join(' ');
-};
-
-const capitalize = (str: string): string => str.charAt(0).toUpperCase() + str.slice(1);
-
 export const Assets = memo(() => {
   const data = useAssetData();
+  const [selectedIndex, setSelectedIndex] = useState(
+    getIndexFromHash(typeof window !== 'undefined' ? window.location.hash : '')
+  );
   const [categories, setCategories] = useState<AssetDataList | null>(null);
   useEffect(() => {
     if (data !== null) {
       setCategories({
-        all: [...data.note, ...data.zenn, ...data.zenn].sort((pre, next) => (pre.date > next.date ? -1 : 1)),
+        all: [...data.note, ...data.zenn, ...data.zenn].sort((pre, next) => (pre.date! > next.date! ? -1 : 1)),
         ...data,
+        slides: SLIDE_LIST,
       });
     }
   }, [data]);
+  // タブの変更によるハッシュ値の変更
+  useEffect(() => {
+    if (
+      typeof window !== 'undefined' &&
+      categories !== null &&
+      selectedIndex > 0 &&
+      selectedIndex !== getIndexFromHash(window.location.hash)
+    ) {
+      history.pushState({}, '', `assets#${Object.keys(categories)[selectedIndex]}`);
+    }
+  }, [selectedIndex]);
   if (categories === null) return <></>;
   return (
     <>
       <div className="w-full px-2 mx-auto">
-        <Tab.Group>
+        <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
           <Tab.List className="flex space-x-1 rounded-full bg-zinc-200/20 p-1 max-w-md mx-auto">
             {Object.keys(categories).map((category) => (
               <Tab
@@ -52,7 +64,13 @@ export const Assets = memo(() => {
                 <ul>
                   {assets.map((asset, idx) => (
                     <li key={idx} className="py-4">
-                      <AssetLinkCard {...asset} />
+                      <AssetLinkCard
+                        {...asset}
+                        date={asset.date!}
+                        favicon={asset.favicon!}
+                        content={isAsset(asset) ? asset.content : asset.description}
+                        site={isAsset(asset) ? asset.site : ''}
+                      />
                     </li>
                   ))}
                 </ul>

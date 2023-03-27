@@ -24,14 +24,17 @@ const rssFeed = {
   zenn: {
     label: 'Zenn',
     url: 'https://zenn.dev/ryota0222/feed',
+    favicon: 'https://zenn.dev/images/logo-transparent.png',
   },
   qiita: {
     label: 'Qiita',
     url: 'https://qiita.com/ryotanny/feed',
+    favicon: 'https://cdn.qiita.com/assets/favicons/public/production-c620d3e403342b1022967ba5e3db1aaa.ico',
   },
   note: {
     label: 'Note',
     url: 'https://note.com/ryotanny/rss',
+    favicon: 'https://assets.st-note.com/poc-image/manual/note-common-images/production/svg/production.ico',
   },
 };
 
@@ -46,8 +49,10 @@ try {
         title: i.title,
         content: i.content,
         url: i.link,
-        date: i.pubDate,
+        date: i.isoDate,
         thumbnail: i.enclosure?.url ?? i.image,
+        favicon: info.favicon,
+        site,
       };
     });
     // jsonFeedに格納

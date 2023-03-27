@@ -1,4 +1,6 @@
-export type AssetDataList = Record<string, AssetData[]>;
+import type { EmbedBaseLinkCardProps } from '@/components/ui/EmbedBaseLinkCard/types';
+
+export type AssetDataList = Record<string, Array<AssetData | EmbedBaseLinkCardProps>>;
 
 export interface AssetData {
   title: string;

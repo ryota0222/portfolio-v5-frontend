@@ -1,7 +1,9 @@
 ---
 import { TITLE, DESCRIPTION, IMAGE } from '@/constants/meta';
-import Header from '@/features/Header/index.astro';
+
 import Footer from '@/features/Footer/index.astro';
+import Header from '@/features/Header/index.astro';
+
 import '@/styles/globals.css';
 import '@/styles/changelog.css';
 import { ReferentialMeasurement } from '@/components/system/ReferentialMeasurement';
@@ -74,6 +76,14 @@ TIPS: グローバルなスタイリングは`is:global`をつける
     stroke: #78716c;
   }
   html.dark .sns-animation-icon-wrapper path {
+    stroke: #d6d3d1;
+  }
+  .loading-animation-icon-wrapper path {
+    fill: #78716c;
+    stroke: #78716c;
+  }
+  html.dark .loading-animation-icon-wrapper path {
+    fill: #d6d3d1;
     stroke: #d6d3d1;
   }
 </style>

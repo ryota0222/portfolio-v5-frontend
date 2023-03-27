@@ -8,6 +8,10 @@ export interface EmbedBaseLinkCardProps {
    */
   description: string;
   /**
+   * 日付
+   */
+  date?: string;
+  /**
    * URL
    */
   url: string;

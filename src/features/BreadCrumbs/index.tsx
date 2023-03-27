@@ -26,7 +26,7 @@ export const BreadCrumbs: React.FC<Props> = memo(({ list }) => {
         <li className="flex items-center text-zinc-700 dark:text-zinc-200" key={index}>
           {displayList.length - 1 !== index ? (
             <>
-              <a className="text-sm underline" href={path}>
+              <a className="text-sm underline cursor-pointer" href={path}>
                 {label}
               </a>
               <span className="px-2 text-sm">＞</span>

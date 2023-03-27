@@ -1,13 +1,16 @@
-import { Tab } from '@headlessui/react';
+import { Player } from '@lottiefiles/react-lottie-player';
 import { memo, useEffect, useState } from 'react';
+
+import loadingAnimation from '@/constants/loading.json';
 
 import { SLIDE_LIST } from '../EngineerIntroduction/constants';
 
-import { AssetLinkCard } from './components/AssetLinkCard';
-import { getIndexFromHash, capitalize, classNames, isAsset } from './functions/utils';
+import { capitalize, classNames, getIndexFromHash, isAsset } from './functions/utils';
 import { useAssetData } from './hooks/useAssetData';
 
 import type { AssetDataList } from './types';
+import { Tab } from '@headlessui/react';
+import { AssetLinkCard } from './components/AssetLinkCard';
 
 export const Assets = memo(() => {
   const data = useAssetData();
@@ -35,7 +38,22 @@ export const Assets = memo(() => {
       history.pushState({}, '', `assets#${Object.keys(categories)[selectedIndex]}`);
     }
   }, [selectedIndex]);
-  if (categories === null) return <></>;
+  if (categories === null)
+    return (
+      <div className="h-[40vh] flex items-center justify-center">
+        <span className="loading-animation-icon-wrapper">
+          <Player
+            src={loadingAnimation}
+            style={{
+              height: '32px',
+              width: '32px',
+            }}
+            autoplay
+            loop
+          />
+        </span>
+      </div>
+    );
   return (
     <>
       <div className="w-full px-2 mx-auto">

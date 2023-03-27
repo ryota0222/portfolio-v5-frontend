@@ -1,0 +1,25 @@
+---
+import PageTitle from '@/components/ui/PageTitle/index.astro';
+
+import { Assets } from '@/features/Assets';
+import { BreadCrumbs } from '@/features/BreadCrumbs';
+
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout url={`${import.meta.env.SITE}/assets`} title="Assets">
+  <div class="container mx-auto max-w-3xl px-4 my-24">
+    <BreadCrumbs
+      list={[
+        {
+          label: 'Assets',
+          path: '/assets',
+        },
+      ]}
+    />
+    <PageTitle>Assets</PageTitle>
+    <div class="flex flex-col gap-4 w-full">
+      <Assets client:load />
+    </div>
+  </div>
+</Layout>

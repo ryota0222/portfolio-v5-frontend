@@ -1,3 +1,4 @@
+import { Tab } from '@headlessui/react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { memo, useEffect, useState } from 'react';
 
@@ -5,12 +6,11 @@ import loadingAnimation from '@/constants/loading.json';
 
 import { SLIDE_LIST } from '../EngineerIntroduction/constants';
 
+import { AssetLinkCard } from './components/AssetLinkCard';
 import { capitalize, classNames, getIndexFromHash, isAsset } from './functions/utils';
 import { useAssetData } from './hooks/useAssetData';
 
 import type { AssetDataList } from './types';
-import { Tab } from '@headlessui/react';
-import { AssetLinkCard } from './components/AssetLinkCard';
 
 export const Assets = memo(() => {
   const data = useAssetData();

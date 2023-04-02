@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly SITE: string;
+  readonly PUBLIC_API_ENDPOINT: string;
 }
 
 interface ImportMeta {

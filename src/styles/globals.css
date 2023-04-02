@@ -17,3 +17,55 @@
   white-space: nowrap;
   border: 0;
 }
+
+.news-notification-hue-transition:hover {
+  position: relative;
+  cursor: pointer;
+  animation: huerotate 4s linear infinite;
+}
+
+.news-notification-hue-transition::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  box-shadow: 0 20px 20px rgb(0 0 0 / 16%); /* filterが効かない場合黒い影をつける */
+}
+
+.news-notification-hue-transition:hover::before {
+  animation: huerotate-bg 4s linear infinite;
+}
+
+/* boxの影 (filterプロパティ対応済のブラウザ) */
+@supports (-webkit-filter: blur(12px)) {
+  .news-notification-hue-transition::before {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    filter: blur(12px);
+    box-shadow: none;
+    opacity: 0.4;
+  }
+}
+
+@keyframes huerotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes huerotate-bg {
+  from {
+    filter: hue-rotate(0deg) blur(20px);
+  }
+
+  to {
+    filter: hue-rotate(360deg) blur(20px);
+  }
+}

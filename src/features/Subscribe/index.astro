@@ -1,0 +1,44 @@
+---
+import { Image } from '@astrojs/image/components';
+
+import { SubscribeButton } from './components/SubscribeButton';
+---
+
+<div>
+  <h3 class="font-bodoni text-black dark:text-white font-bold text-4xl text-center">Subscribe</h3>
+  <div class="flex justify-center items-center my-16 px-0">
+    <div class="flex pr-0 md:pr-8 w-full md:w-1/2 justify-end">
+      <div class="dark:text-white w-full md:w-auto">
+        <span class="px-4 mdpx-0">以下のお知らせを通知します。</span>
+        <ul class="list-disc pl-8 my-8">
+          <li class="my-2">記事の投稿のお知らせ</li>
+          <li class="my-2">ポートフォリオの新バージョンのお知らせ</li>
+          <li class="my-2">イラストの販売のお知らせ</li>
+        </ul>
+        <div class="w-[90%] ml-[10%] block md:hidden">
+          <Image
+            src="/images/3d-man.webp"
+            alt="PCを操作する男性"
+            class="w-full h-full object-contain"
+            width={360}
+            height={320}
+            format="webp"
+          />
+        </div>
+        <div class="px-8 md:px-0 mt-[-80px] md:mt-0">
+          <SubscribeButton client:load />
+        </div>
+      </div>
+    </div>
+    <div class="w-1/2 max-h-[520px] pl-8 hidden md:block">
+      <Image
+        src="/images/3d-man.webp"
+        alt="PCを操作する男性"
+        class="w-full h-full object-contain max-h-[520px] object-right"
+        width={520}
+        height={480}
+        format="webp"
+      />
+    </div>
+  </div>
+</div>

@@ -43,6 +43,7 @@ export const Assets = memo(() => {
       <div className="h-[40vh] flex items-center justify-center">
         <span className="loading-animation-icon-wrapper">
           <Player
+            id="loading"
             src={loadingAnimation}
             style={{
               height: '32px',

@@ -19,7 +19,7 @@ export const AssetLinkCard: React.FC<Props> = memo(({ title, content, url, date,
         <div className="text-sm my-2 text-black dark:text-white line-clamp-2 opacity-80">
           {dayjs(date).format('YYYY/MM/DD')}
         </div>
-        <div className="overflow-hidden text-xs text-ellipsis whitespace-nowrap text-blue-500 dark:text-blue-300 underline">
+        <div className="overflow-hidden text-xs text-ellipsis whitespace-nowrap text-blue-600 dark:text-blue-300 underline">
           <img src={favicon} className="mr-1 inline-block" alt="favicon" width={14} height={14} loading="lazy" />
           {url}
         </div>

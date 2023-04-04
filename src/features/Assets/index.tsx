@@ -21,7 +21,7 @@ export const Assets = memo(() => {
   useEffect(() => {
     if (data !== null) {
       setCategories({
-        all: [...data.note, ...data.zenn, ...data.zenn].sort((pre, next) => (pre.date! > next.date! ? -1 : 1)),
+        all: [...data.note, ...data.qiita, ...data.zenn].sort((pre, next) => (pre.date! > next.date! ? -1 : 1)),
         ...data,
         slides: SLIDE_LIST,
       });

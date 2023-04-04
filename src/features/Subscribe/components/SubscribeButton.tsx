@@ -23,7 +23,7 @@ export const SubscribeButton = memo(() => {
       case 'denied':
         return 'プッシュ通知を拒否されました';
       case 'granted':
-        return 'ありがたく通知させていただきます';
+        return 'ありがたく通知させていただきます🎉';
       case 'default':
       default:
         return '通知を受け取る';
@@ -48,7 +48,7 @@ export const SubscribeButton = memo(() => {
       disabled={disabled}
     >
       <span role="presentation" className="notification-animation-icon-wrapper gray">
-        {permission === 'default' || permission === 'granted' ? (
+        {permission === 'default' ? (
           <Player
             id="subscribe-notification"
             lottieRef={(instance) => {
@@ -62,16 +62,22 @@ export const SubscribeButton = memo(() => {
             loop
           />
         ) : (
-          <Player
-            id="alert"
-            src={alertAnimation}
-            style={{
-              height: '32px',
-              width: '32px',
-            }}
-            loop
-            autoplay
-          />
+          <>
+            {permission === 'granted' ? (
+              <></>
+            ) : (
+              <Player
+                id="alert"
+                src={alertAnimation}
+                style={{
+                  height: '32px',
+                  width: '32px',
+                }}
+                loop
+                autoplay
+              />
+            )}
+          </>
         )}
       </span>
       {label}

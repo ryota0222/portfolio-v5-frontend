@@ -1,5 +1,6 @@
-import { memo } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { memo } from 'react';
+
 import scrollDownAnimation from '@/constants/scroll-down.json';
 
 export const ScrollDown = memo(() => {
@@ -10,6 +11,7 @@ export const ScrollDown = memo(() => {
       className="flex flex-col items-center gap-2 scroll-animation-icon-wrapper"
     >
       <Player
+        id="scroll-down"
         src={scrollDownAnimation}
         style={{
           height: '32px',

@@ -31,6 +31,7 @@ export const ModeToggleButton = memo(() => {
     >
       <Player
         ref={ref}
+        id='mode-toggle'
         lottieRef={() => setRendered(true)}
         src="https://assets4.lottiefiles.com/private_files/lf30_jim7okck.json"
         style={{

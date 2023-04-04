@@ -39,6 +39,7 @@ export const SnsGroup = memo(() => {
         >
           <span role="img" aria-label="Twitter">
             <Player
+              id="dt-twitter"
               src={twitterAnimation}
               style={{
                 height: '32px',
@@ -57,6 +58,7 @@ export const SnsGroup = memo(() => {
         >
           <span role="img" aria-label="GitHub">
             <Player
+              id="dt-github"
               src={githubAnimation}
               style={{
                 height: '32px',
@@ -75,6 +77,7 @@ export const SnsGroup = memo(() => {
         >
           <span role="img" aria-label="Instagram" ref={dtRef}>
             <Player
+              id="dt-instagram"
               src={instagramAnimation}
               lottieRef={(instance) => {
                 setLottieDtRef(instance);
@@ -103,6 +106,7 @@ export const SnsGroup = memo(() => {
           >
             <span role="img" aria-label="Twitter">
               <Player
+                id="sp-twitter"
                 src={twitterAnimation}
                 style={{
                   height: '32px',
@@ -121,6 +125,7 @@ export const SnsGroup = memo(() => {
           >
             <span role="img" aria-label="Instagram">
               <Player
+                id="sp-github"
                 src={githubAnimation}
                 style={{
                   height: '32px',
@@ -139,6 +144,7 @@ export const SnsGroup = memo(() => {
           >
             <span role="img" aria-label="Instagram" ref={spRef}>
               <Player
+                id="sp-instagram"
                 lottieRef={(instance) => {
                   setLottieSpRef(instance);
                 }}

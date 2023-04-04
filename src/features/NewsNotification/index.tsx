@@ -12,6 +12,7 @@ export const NewsNotification = memo(() => {
     <div className="text-white min-w-0 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 p-3 flex justify-between items-center w-11/12 md:w-fit md:min-w-[500px] news-notification-hue-transition">
       <span className="notification-animation-icon-wrapper">
         <Player
+          id="notification-bell"
           src={notificationAnimation}
           style={{
             height: '24px',

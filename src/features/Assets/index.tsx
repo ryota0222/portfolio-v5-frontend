@@ -65,10 +65,10 @@ export const Assets = memo(() => {
                 key={category}
                 className={({ selected }) =>
                   classNames(
-                    'w-full rounded-full py-2 text-sm font-medium leading-5 text-white',
+                    'w-full rounded-full py-2 text-sm font-medium leading-5',
                     'ring-opacity-0 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                     selected
-                      ? 'bg-dark dark:bg-white dark:text-dark shadow'
+                      ? 'bg-dark text-white dark:bg-white dark:text-dark shadow'
                       : 'text-black dark:text-white hover:bg-zinc-400/[0.12] hover:text-zinc-80'
                   )
                 }

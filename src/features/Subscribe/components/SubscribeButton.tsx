@@ -42,7 +42,7 @@ export const SubscribeButton = memo(() => {
   }, [isHover]);
   return (
     <button
-      className="flex border rounded-full py-2 px-16 md:py-4 text-sm md:text-base w-full justify-center items-center gap-4 bg-white/60 dark:bg-dark/60 backdrop-blur-[4px] backdrop-saturate-[180%]"
+      className="flex border rounded-full py-2 px-12 md:py-4 text-sm md:text-base w-full justify-center items-center gap-4 bg-white/60 dark:bg-dark/60 backdrop-blur-[4px] backdrop-saturate-[180%] max-w-none md:max-w-[400px]"
       ref={ref}
       onClick={handleClick}
       disabled={disabled}

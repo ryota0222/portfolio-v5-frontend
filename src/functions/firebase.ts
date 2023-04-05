@@ -17,7 +17,7 @@ export const requestNotificationPermission = async (): Promise<void> => {
 
   try {
     const token = await getToken(messaging, {
-      vapidKey: process.env.NEXT_PUBLIC_FIREBASE_WEBPUSH_KEY,
+      vapidKey: 'BM78y60zb4xaIXJQGy2dvxT-tV5az3TsZ0x0eZ8NMiGsfP1Wc-nuew1nstIveh_y7iWn-0TdVWyifUAE3RzPLeA',
     });
     await addDoc(collection(firestore, 'notification'), { token });
   } catch (error) {

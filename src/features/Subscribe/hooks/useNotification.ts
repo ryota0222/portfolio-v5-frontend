@@ -16,7 +16,6 @@ export const useNotification: UseNotification = () => {
   const [permission, setPermission] = useState<NotificationPermission | 'not-supported'>('default');
   const revalidate = useCallback(() => {
     if ('Notification' in window) {
-      console.log(`permission: ${Notification.permission}`);
       setPermission(Notification.permission);
     } else {
       setPermission('not-supported');

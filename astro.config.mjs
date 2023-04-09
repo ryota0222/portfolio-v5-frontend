@@ -12,6 +12,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://portfolio.ryotanny.com",
   integrations: [react(), image(), prefetch(), tailwind(), AstroPWA({
-    manifestFilename: '/manifest/manifest.webmanifest'
+    manifestFilename: '/favicons/site.webmanifest'
   })]
 });

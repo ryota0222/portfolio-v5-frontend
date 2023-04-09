@@ -15,7 +15,10 @@ export const ReferentialMeasurement: React.FC = memo(() => {
       );
       // バッジがあれば削除
       // (navigator as any)?.clearAppBadge();
-      (navigator as any)?.setAppBadge(1);
+      (navigator as any)
+        ?.setAppBadge(1)
+        .then(() => console.log('success!'))
+        .catch((err: any) => console.log(err));
     }
   }, []);
   return <></>;

@@ -14,7 +14,8 @@ export const ReferentialMeasurement: React.FC = memo(() => {
         ''
       );
       // バッジがあれば削除
-      (navigator as any)?.clearAppBadge();
+      // (navigator as any)?.clearAppBadge();
+      (navigator as any)?.setAppBadge(1);
     }
   }, []);
   return <></>;

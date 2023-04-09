@@ -15,10 +15,16 @@ export const ReferentialMeasurement: React.FC = memo(() => {
       );
       // バッジがあれば削除
       // (navigator as any)?.clearAppBadge();
-      (navigator as any)
-        ?.setAppBadge(1)
-        .then(() => console.log('success!'))
-        .catch((err: any) => console.log(err));
+      if ('setAppBadge' in navigator) {
+        (navigator as any)
+          .setAppBadge(1)
+          .then(() => console.log('success!'))
+          .catch((err: any) => console.log(err));
+      }
+      // service workerの登録
+      if ('serviceWorker' in navigator) {
+        void navigator.serviceWorker.register('/serviceWorker.js');
+      }
     }
   }, []);
   return <></>;

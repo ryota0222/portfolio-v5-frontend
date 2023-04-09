@@ -13,6 +13,8 @@ export const ReferentialMeasurement: React.FC = memo(() => {
         'color:red;',
         ''
       );
+      // バッジがあれば削除
+      (navigator as any)?.clearAppBadge();
     }
   }, []);
   return <></>;

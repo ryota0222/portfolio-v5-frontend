@@ -13,13 +13,6 @@ export const ReferentialMeasurement: React.FC = memo(() => {
         'color:red;',
         ''
       );
-      // バッジがあれば削除
-      if ('clearAppBadge' in navigator) {
-        (navigator as any)
-          .clearAppBadge()
-          .then(() => console.log('success!'))
-          .catch((err: any) => console.log(err));
-      }
       // service workerの登録
       if ('serviceWorker' in navigator) {
         void navigator.serviceWorker.register('/serviceWorker.js');

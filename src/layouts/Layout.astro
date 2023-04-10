@@ -50,6 +50,15 @@ const _title = title ? `${title} - ${TITLE}` : TITLE;
     <Header />
     <slot />
     <Footer />
+    <script>
+      // バッジがあれば削除
+      if (typeof navigator !== 'undefined' && 'clearAppBadge' in navigator) {
+        (navigator as any)
+          .clearAppBadge()
+          .then(() => {})
+          .catch((err: any) => console.log(err));
+      }
+    </script>
   </body>
 </html>
 

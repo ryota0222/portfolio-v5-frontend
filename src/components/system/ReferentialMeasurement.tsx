@@ -13,10 +13,6 @@ export const ReferentialMeasurement: React.FC = memo(() => {
         'color:red;',
         ''
       );
-      // service workerの登録
-      if ('serviceWorker' in navigator) {
-        void navigator.serviceWorker.register('/serviceWorker.js');
-      }
     }
   }, []);
   return <></>;

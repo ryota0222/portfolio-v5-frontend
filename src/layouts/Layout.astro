@@ -51,12 +51,9 @@ const _title = title ? `${title} - ${TITLE}` : TITLE;
     <slot />
     <Footer />
     <script>
-      // バッジがあれば削除
-      if (typeof navigator !== 'undefined' && 'clearAppBadge' in navigator) {
-        (navigator as any)
-          .clearAppBadge()
-          .then(() => {})
-          .catch((err: any) => console.log(err));
+      // service workerの登録
+      if ('serviceWorker' in navigator) {
+        void navigator.serviceWorker.register('/serviceWorker.js');
       }
     </script>
   </body>

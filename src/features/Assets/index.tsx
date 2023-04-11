@@ -12,11 +12,11 @@ import { useAssetData } from './hooks/useAssetData';
 
 import type { AssetDataList } from './types';
 
+import { isBrowser } from '@/misc/util';
+
 export const Assets = memo(() => {
   const data = useAssetData();
-  const [selectedIndex, setSelectedIndex] = useState(
-    getIndexFromHash(typeof window !== 'undefined' ? window.location.hash : '')
-  );
+  const [selectedIndex, setSelectedIndex] = useState(getIndexFromHash(isBrowser ? window.location.hash : ''));
   const [categories, setCategories] = useState<AssetDataList | null>(null);
   useEffect(() => {
     if (data !== null) {
@@ -30,7 +30,7 @@ export const Assets = memo(() => {
   // タブの変更によるハッシュ値の変更
   useEffect(() => {
     if (
-      typeof window !== 'undefined' &&
+      isBrowser &&
       categories !== null &&
       selectedIndex > 0 &&
       selectedIndex !== getIndexFromHash(window.location.hash)

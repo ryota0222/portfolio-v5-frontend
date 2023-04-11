@@ -21,3 +21,23 @@ export function off<T extends Window | Document | HTMLElement | EventTarget>(
 export const isBrowser = typeof window !== 'undefined';
 
 export const isNavigator = typeof navigator !== 'undefined';
+
+/**
+ * PWAの表示モードの取得
+ * - twa(Trusted Web Activity)
+ * - standalone
+ * - browser
+ * @returns {twa | standalone | browser | null}
+ */
+export const getPWADisplayMode = () => {
+  if (isBrowser) {
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    if (document.referrer.startsWith('android-app://')) {
+      return 'twa';
+    } else if ((navigator as any).standalone || isStandalone) {
+      return 'standalone';
+    }
+    return 'browser';
+  }
+  return null;
+};

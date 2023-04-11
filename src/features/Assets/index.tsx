@@ -18,6 +18,7 @@ export const Assets = memo(() => {
   const data = useAssetData();
   const [selectedIndex, setSelectedIndex] = useState(getIndexFromHash(isBrowser ? window.location.hash : ''));
   const [categories, setCategories] = useState<AssetDataList | null>(null);
+  console.log(categories);
   useEffect(() => {
     if (data !== null) {
       setCategories({
@@ -88,7 +89,7 @@ export const Assets = memo(() => {
                         date={asset.date!}
                         favicon={asset.favicon!}
                         content={isAsset(asset) ? asset.content : asset.description}
-                        site={isAsset(asset) ? asset.site : ''}
+                        site={isAsset(asset) ? asset.site : asset.siteName}
                       />
                     </li>
                   ))}

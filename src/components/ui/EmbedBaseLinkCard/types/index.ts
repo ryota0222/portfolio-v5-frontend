@@ -23,4 +23,8 @@ export interface EmbedBaseLinkCardProps {
    * サムネイル
    */
   thumbnail?: string;
+  /**
+   * サイト名
+   */
+  siteName: string;
 }

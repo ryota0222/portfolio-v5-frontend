@@ -34,7 +34,7 @@ export const ScreenEventObserver: React.FC<PropsWithChildren<Props>> = memo(({ i
         }
       } else if (id === 'subscribe') {
         if (window.location.hash === hash) {
-          history.pushState({}, '', `#ryota`);
+          history.pushState({}, '', location.pathname);
         }
       }
     }

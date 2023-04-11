@@ -1,8 +1,11 @@
-import { useOnScreen } from '@/hooks/useOnScreen';
-import { ScreenMode } from '@/types/global';
 import React, { memo, useRef } from 'react';
-import type { PropsWithChildren } from 'react';
+
+import { useOnScreen } from '@/hooks/useOnScreen';
 import { useUpdateEffect } from '@/hooks/useUpdateEffect';
+
+import { ScreenMode } from '@/types/global';
+
+import type { PropsWithChildren } from 'react';
 
 interface Props {
   id: string;
@@ -17,15 +20,21 @@ export const ScreenEventObserver: React.FC<PropsWithChildren<Props>> = memo(({ i
     if (isVisible && window.location.hash !== hash) {
       history.pushState({}, '', `#${id}`);
     } else {
-      if (id === 'illustrator') {
-        if (window.location.hash === hash) {
-          history.pushState({}, '', `#engineer`);
-        }
-      } else if (id === 'engineer') {
+      if (id === 'engineer') {
         if (targetViewPosition === ScreenMode.BelowViewport && window.location.hash === hash) {
           history.pushState({}, '', location.pathname);
         } else if (targetViewPosition === ScreenMode.AboveViewport && window.location.hash === hash) {
           history.pushState({}, '', `#illustrator`);
+        }
+      } else if (id === 'illustrator') {
+        if (targetViewPosition === ScreenMode.BelowViewport && window.location.hash === hash) {
+          history.pushState({}, '', location.pathname);
+        } else if (targetViewPosition === ScreenMode.AboveViewport && window.location.hash === hash) {
+          history.pushState({}, '', `#subscribe`);
+        }
+      } else if (id === 'subscribe') {
+        if (window.location.hash === hash) {
+          history.pushState({}, '', `#ryota`);
         }
       }
     }

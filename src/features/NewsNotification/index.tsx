@@ -1,11 +1,13 @@
 import { Player } from '@lottiefiles/react-lottie-player';
-import { memo, useMemo } from 'react';
+import { memo, useEffect, useMemo } from 'react';
 
 import notificationAnimation from '@/constants/notification.json';
 
 import dayjs from '@/lib/dayjs';
 
 import { useNewsData } from './hooks/useNewsData';
+
+import { isNavigator } from '@/misc/util';
 
 export const NewsNotification = memo(() => {
   const data = useNewsData();
@@ -18,6 +20,15 @@ export const NewsNotification = memo(() => {
     return value;
   }, [data]);
   if (data === null || !isBefore) return <div role="presentation" className="h-[62px]"></div>;
+  // 通知を削除する
+  useEffect(() => {
+    if (isNavigator && 'clearAppBadge' in navigator) {
+      (navigator as any)
+        .clearAppBadge()
+        .then(() => console.log('clear app badge'))
+        .catch((err: any) => console.log(err));
+    }
+  }, []);
   return (
     <div className="text-white min-w-0 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 p-3 flex justify-between items-center w-11/12 md:w-fit md:min-w-[500px] news-notification-hue-transition">
       <span className="notification-animation-icon-wrapper">

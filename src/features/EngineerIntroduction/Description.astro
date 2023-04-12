@@ -11,11 +11,11 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
 
 <dl class="flex flex-col gap-8 md:gap-4">
   <!-- 名前 -->
-  <DescriptionItem title="名前">りょーた</DescriptionItem>
+  <DescriptionItem title="名前" color="before:text-[#ef4444]">りょーた</DescriptionItem>
   <!-- 所属 -->
-  <DescriptionItem title="所属">株式会社ニュートラル{'　'}役員</DescriptionItem>
+  <DescriptionItem title="所属" color="before:text-[#f59e0b]">株式会社ニュートラル{'　'}役員</DescriptionItem>
   <!-- 自己紹介 -->
-  <DescriptionItem title="自己紹介">
+  <DescriptionItem title="自己紹介" color="before:text-[#eab308]">
     ３年間フロントエンドエンジニアとして活動後、デザインエンジニアにキャリアチェンジ<br />
     フロントエンド全般とデザインに興味があります。作ることが好きで、趣味でWebアプリを作っています。<br />
     勉強会の運営や、登壇、記事の執筆も行っています。<br />
@@ -32,7 +32,7 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
       />
     </div>
     <br />
-    私に興味を持っていただいた方はぜひカジュアルにお話ししましょう！！<br />
+    興味を持っていただいた方はぜひカジュアルにお話ししましょう！！<br />
     ↓以下からお気軽にご応募ください😊
     <div class="my-4">
       <EmbedBaseLinkCard
@@ -46,7 +46,7 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
     </div>
   </DescriptionItem>
   <!-- 経歴 -->
-  <DescriptionItem title="経歴">
+  <DescriptionItem title="経歴" color="before:text-[#84cc16]">
     <ChronologicalTable
       data={[
         { date: '2020-03', description: '神戸大学  工学部  機械工学科卒業' },
@@ -57,13 +57,13 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
     />
   </DescriptionItem>
   <!-- 副業 -->
-  <DescriptionItem title="副業">
+  <DescriptionItem title="副業" color="before:text-[#10b981]">
     <ChronologicalTable
       data={[{ date: '2022-03', description: '新規サービスのモックをFigmaで作成する業務委託（2022.05に終了）' }]}
     />
   </DescriptionItem>
   <!-- 活動 -->
-  <DescriptionItem title="活動">
+  <DescriptionItem title="活動" color="before:text-[#14b8a6]">
     <ChronologicalTable
       data={[
         { date: '2021-01', description: 'つながる勉強会の運営' },
@@ -74,7 +74,7 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
     />
   </DescriptionItem>
   <!-- 登壇 -->
-  <DescriptionItem title="登壇">
+  <DescriptionItem title="登壇" color="before:text-[#06b6d4]">
     <div class="flex flex-col gap-4 w-full">
       {SLIDE_LIST.slice(0, 3).map((slide) => <EmbedBaseLinkCard {...slide} />)}
     </div>
@@ -87,19 +87,19 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
     </div>
   </DescriptionItem>
   <!-- スキル -->
-  <DescriptionItem title="スキル"><SkillSet client:load /></DescriptionItem>
+  <DescriptionItem title="スキル" color="before:text-[#3b82f6]"><SkillSet client:load /></DescriptionItem>
   <!-- 資格 -->
-  <DescriptionItem title="資格">
+  <DescriptionItem title="資格" color="before:text-[#6366f1]">
     <UnorderListTable data={['HTML5プロフェッショナル認定試験レベル1']} />
   </DescriptionItem>
   <!-- 制作物 -->
-  <DescriptionItem title="制作物">
+  <DescriptionItem title="制作物" color="before:text-[#a855f7]">
     <div class="flex flex-col gap-4 w-full">
       {APPLICATION_LIST.map((application) => <EmbedBaseLinkCard {...application} />)}
     </div>
   </DescriptionItem>
   <!-- リンク -->
-  <DescriptionItem title="リンク">
+  <DescriptionItem title="リンク" color="before:text-[#ec4899]">
     <LinkList client:load />
   </DescriptionItem>
 </dl>

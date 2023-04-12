@@ -89,5 +89,11 @@
       "type": "image/png",
       "purpose": "maskable"
     }
+  ],
+  "related_application": [
+    {
+      "platform": "webapp",
+      "url": "https://portfolio.ryotanny.com/favicons/site.webmanifest"
+    }
   ]
 }

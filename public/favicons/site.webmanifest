@@ -95,5 +95,32 @@
       "platform": "webapp",
       "url": "https://portfolio.ryotanny.com/favicons/site.webmanifest"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot1.png",
+      "sizes": "640x1280",
+      "type": "image/png"
+    },
+    {
+      "src": "images/screenshot2.png",
+      "sizes": "640x1280",
+      "type": "image/png"
+    },
+    {
+      "src": "images/screenshot3.png",
+      "sizes": "640x1280",
+      "type": "image/png"
+    },
+    {
+      "src": "images/screenshot4.png",
+      "sizes": "640x1280",
+      "type": "image/png"
+    },
+    {
+      "src": "images/screenshot5.png",
+      "sizes": "640x1280",
+      "type": "image/png"
+    }
   ]
 }

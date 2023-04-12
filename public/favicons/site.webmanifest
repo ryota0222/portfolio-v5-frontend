@@ -90,7 +90,7 @@
       "purpose": "maskable"
     }
   ],
-  "related_application": [
+  "related_applications": [
     {
       "platform": "webapp",
       "url": "https://portfolio.ryotanny.com/favicons/site.webmanifest"

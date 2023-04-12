@@ -96,7 +96,7 @@ export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
   {
     url: 'http://w-tetris.ryotanny.com/',
     title: 'W Tetris',
-    description: 'テトリス/Ca/vasで作成しました。PWA対応済み。',
+    description: 'テトリスをCanvasで作成しました。PWA対応',
     favicon: 'https://w-tetris.ryotanny.com/favicon.ico',
     siteName: 'W Tetris',
     thumbnail: 'https://w-tetris.ryotanny.com/logo192.png',

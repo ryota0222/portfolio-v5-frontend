@@ -98,29 +98,34 @@
   ],
   "screenshots": [
     {
-      "src": "images/screenshot1.png",
+      "src": "/images/screenshot1.png",
       "sizes": "640x1280",
-      "type": "image/png"
+      "type": "image/png",
+      "label": "RyoTa. ポートフォリオ"
     },
     {
-      "src": "images/screenshot2.png",
+      "src": "/images/screenshot2.png",
       "sizes": "640x1280",
-      "type": "image/png"
+      "type": "image/png",
+      "label": "りょーたの全てがわかる"
     },
     {
-      "src": "images/screenshot3.png",
+      "src": "/images/screenshot3.png",
       "sizes": "640x1280",
-      "type": "image/png"
+      "type": "image/png",
+      "label": "A2HS"
     },
     {
-      "src": "images/screenshot4.png",
+      "src": "/images/screenshot4.png",
       "sizes": "640x1280",
-      "type": "image/png"
+      "type": "image/png",
+      "label": "最新情報をお知らせ"
     },
     {
-      "src": "images/screenshot5.png",
+      "src": "/images/screenshot5.png",
       "sizes": "640x1280",
-      "type": "image/png"
+      "type": "image/png",
+      "label": "見逃しても、大丈夫"
     }
   ]
 }

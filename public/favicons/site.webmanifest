@@ -127,5 +127,20 @@
       "type": "image/png",
       "label": "見逃しても、大丈夫"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Assets",
+      "url": "/assets",
+      "description": "List of assets"
+    },
+    {
+      "name": "View Engineer portfolio",
+      "url": "/#engineer?utm_source=PWA"
+    },
+    {
+      "name": "View Illustrator portfolio",
+      "url": "/#illustrator?utm_source=PWA"
+    }
   ]
 }

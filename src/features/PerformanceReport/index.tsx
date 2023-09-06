@@ -31,7 +31,11 @@ export const PerformanceReport = memo(() => {
     <div style={{ minHeight: fileData === null ? 0 : '240px' }} className="w-full max-w-2xl mx-auto">
       {fileData !== null && (
         <>
-          <span className="text-black dark:text-white pt-16 font-bold block mb-4">パフォーマンス</span>
+          <span
+            className={`block font-bold w-24 text-black dark:text-white before:content-['#'] before:pr-1 before:text-[#FF7575]`}
+          >
+            パフォーマンス
+          </span>
           <p className="mb-8 text-black dark:text-white">
             PageSpeed Insightsを用いて計測しました（計測時刻：
             {dayjs(fileData.lighthouseResult.fetchTime).format('YYYY/MM/DD HH:mm')}）

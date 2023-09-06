@@ -1,8 +1,6 @@
 import { memo } from 'react';
 
 import { GitHub } from '@/components/ui/icons/GitHub';
-import { Note } from '@/components/ui/icons/Note';
-import { Qiita } from '@/components/ui/icons/Qiita';
 import { Twitter } from '@/components/ui/icons/Twitter';
 import { Zenn } from '@/components/ui/icons/Zenn';
 import { useIsDarkMode } from '@/components/ui/ModeToggleButton/hooks/useToggleMode';
@@ -47,7 +45,7 @@ export const LinkList = memo(() => {
             <div className="h-full">
               <a href="https://qiita.com/RyoTa_0222" target="_blank" rel="noopener noreferrer" className="block h-full">
                 <span role="img" aria-label="Qiita" className="flex items-center justify-center h-full">
-                  <Qiita color={isDarkMode ? '#FFF' : '#000'} />
+                  <img src="/images/qiita.png" alt="Qiita" width={32} height={32} loading="lazy" />
                 </span>
               </a>
             </div>
@@ -60,11 +58,18 @@ export const LinkList = memo(() => {
               </span>
             </a>
           </dd>
-          {/* Note */}
-          <dd aria-label="Note" title="Note">
+          {/* note */}
+          <dd aria-label="note" title="note">
             <a href="https://note.com/ryotanny" target="_blank" rel="noopener noreferrer" className="block h-full">
-              <span role="img" aria-label="Note" className="flex items-center justify-center h-full">
-                <Note color={isDarkMode ? '#FFF' : '#000'} />
+              <span role="img" aria-label="note" className="flex items-center justify-center h-full">
+                <img
+                  src="/images/note.svg"
+                  alt="note"
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                  style={{ filter: isDarkMode ? 'invert(1)' : undefined }}
+                />
               </span>
             </a>
           </dd>

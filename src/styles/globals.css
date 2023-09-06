@@ -33,3 +33,8 @@
     filter: hue-rotate(360deg);
   }
 }
+
+body .splide__list {
+  padding-top: 1rem !important;
+  padding-bottom: 3rem !important;
+}

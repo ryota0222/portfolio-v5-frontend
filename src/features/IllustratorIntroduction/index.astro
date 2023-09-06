@@ -3,7 +3,8 @@ import { ScreenEventObserver } from '@/components/system/ScreenEventObserver';
 
 import Description from './Description.astro';
 import InstagramWork from './InstagramWork.astro';
-import LINEStickerWork from './LINEStickerWork.astro';
+import {LINEStickerWork} from './LINEStickerWork';
+import { ShirtWork } from './ShirtWork';
 import Title from './Title.astro';
 ---
 
@@ -15,5 +16,6 @@ import Title from './Title.astro';
     </div>
   </div>
   <InstagramWork />
-  <LINEStickerWork />
+  <LINEStickerWork client:only />
+  <ShirtWork client:only />
 </ScreenEventObserver>

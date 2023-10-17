@@ -1,7 +1,6 @@
 import { memo } from 'react';
 
 import { GitHub } from '@/components/ui/icons/GitHub';
-import { Twitter } from '@/components/ui/icons/Twitter';
 import { Zenn } from '@/components/ui/icons/Zenn';
 import { useIsDarkMode } from '@/components/ui/ModeToggleButton/hooks/useToggleMode';
 
@@ -25,7 +24,14 @@ export const LinkList = memo(() => {
                 className="block h-full"
               >
                 <span role="img" aria-label="Twitter" className="flex items-center justify-center h-full">
-                  <Twitter color="#1DA1F2" />
+                  <img
+                    src="/images/logo-black.png"
+                    alt="note"
+                    width={32}
+                    height={32}
+                    loading="lazy"
+                    style={{ filter: isDarkMode ? 'invert(1)' : undefined }}
+                  />
                 </span>
               </a>
             </div>
@@ -72,21 +78,6 @@ export const LinkList = memo(() => {
                 />
               </span>
             </a>
-          </dd>
-          {/* つながる勉強会 */}
-          <dd title="つながる勉強会" aria-label="つながる勉強会">
-            <div className="h-full">
-              <a
-                href="https://www.notion.so/31469dcb91b245d1b5e1de8e0e4b3b4b"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block h-full"
-              >
-                <span role="img" aria-label="つながる勉強会" className="flex items-center justify-center h-full">
-                  <img src="/images/tsunagaru.png" alt="つながる勉強会" width={32} height={32} loading="lazy" />
-                </span>
-              </a>
-            </div>
           </dd>
         </div>
       </dl>

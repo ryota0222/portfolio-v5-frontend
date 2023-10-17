@@ -14,8 +14,8 @@ export const LinkList = memo(() => {
       <dl className="px-6 py-4 bg-zinc-50 dark:bg-zinc-800 flex flex-col">
         <dt className="visibility-hidden">リンク一覧</dt>
         <div className="flex justify-evenly flex-wrap">
-          {/* Twitter */}
-          <dd title="Twitter" aria-label="Twitter">
+          {/* X（Twitter） */}
+          <dd title="X（Twitter）" aria-label="X（Twitter）">
             <div className="h-full">
               <a
                 href="https://twitter.com/RyoTa___0222"
@@ -23,14 +23,14 @@ export const LinkList = memo(() => {
                 rel="noopener noreferrer"
                 className="block h-full"
               >
-                <span role="img" aria-label="Twitter" className="flex items-center justify-center h-full">
+                <span role="img" aria-label="X（Twitter）" className="flex items-center justify-center h-full">
                   <img
-                    src="/images/logo-black.png"
-                    alt="note"
+                    src="/images/x-logo.svg"
+                    alt="X（Twitter）"
                     width={32}
                     height={32}
                     loading="lazy"
-                    style={{ filter: isDarkMode ? 'invert(1)' : undefined }}
+                    style={{ filter: !isDarkMode ? 'invert(1)' : undefined }}
                   />
                 </span>
               </a>

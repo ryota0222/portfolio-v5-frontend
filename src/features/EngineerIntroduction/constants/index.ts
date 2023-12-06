@@ -2,6 +2,15 @@ import type { EmbedBaseLinkCardProps } from '@/components/ui/EmbedBaseLinkCard/t
 
 export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
   {
+    url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ffya36ZLpl0HrX2YL3fKxqi%2FBeer-Bust%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2%26viewport%3D260%252C242%252C0.1%26t%3DPeoO03HLp8fvaTH0-1%26scaling%3Dcontain%26mode%3Ddesign',
+    title: 'Beer Bust',
+    description: '2023/10/19',
+    date: '2023-10-19',
+    siteName: 'Figma',
+    favicon: 'https://static.figma.com/app/icon/1/favicon.png',
+    thumbnail: '/images/slides/2023-10-19.webp',
+  },
+  {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FnWOVEhLcy4lZ0lhUUyeQat%2F%25E3%2580%2590%25E9%259D%259E%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25BC%25E5%2590%2591%25E3%2581%2591%25E3%2580%2591%25E3%2582%25BD%25E3%2583%2595%25E3%2583%2588%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A2%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%25AE%25E5%25A7%258B%25E3%2582%2581%25E6%2596%25B9%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2%26viewport%3D514%252C921%252C0.07%26t%3Dcl49c5cSGjCXyjbR',
     title: '【非デザイナー向け】ソフトウェアデザインの始め方',
     description: '2023/7/30',
@@ -10,7 +19,6 @@ export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
     favicon: 'https://static.figma.com/app/icon/1/favicon.png',
     thumbnail: '/images/slides/2023-7-30.webp',
   },
-
   {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F6MD1YxdH6FFAAGRHBd2x3L%2F%25E5%258B%2589%25E5%25BC%25B7%25E4%25BC%259A%3Fpage-id%3D28%253A35%26node-id%3D28%253A36%26viewport%3D505%252C59%252C0.06%26scaling%3Dcontain%26starting-point-node-id%3D28%253A36',
     title: '転職活動が終わった話',

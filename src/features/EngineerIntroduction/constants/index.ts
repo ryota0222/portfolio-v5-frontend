@@ -2,6 +2,15 @@ import type { EmbedBaseLinkCardProps } from '@/components/ui/EmbedBaseLinkCard/t
 
 export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
   {
+    url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FCNFeVIHuIVgHjNVUsZqpAK%2F2023%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A%3Fpage-id%3D0%253A1%26node-id%3D1-2%26scaling%3Dscale-down%26mode%3Ddesign',
+    title: '2023年振り返り',
+    description: '2023/12/15',
+    date: '2023-12-15',
+    siteName: 'Figma',
+    favicon: 'https://static.figma.com/app/icon/1/favicon.png',
+    thumbnail: '/images/slides/2023-12-15.webp',
+  },
+  {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ffya36ZLpl0HrX2YL3fKxqi%2FBeer-Bust%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2%26viewport%3D260%252C242%252C0.1%26t%3DPeoO03HLp8fvaTH0-1%26scaling%3Dcontain%26mode%3Ddesign',
     title: 'Beer Bust',
     description: '2023/10/19',

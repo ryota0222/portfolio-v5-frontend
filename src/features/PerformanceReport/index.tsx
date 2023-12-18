@@ -32,7 +32,7 @@ export const PerformanceReport = memo(() => {
       {fileData !== null && (
         <>
           <span
-            className={`block mt-8 mb-4 font-bold text-black dark:text-white before:content-['#'] before:pr-1 before:text-[#FF7575]`}
+            className={`block mt-8 mb-2 font-bold text-black dark:text-white before:content-['#'] before:pr-1 before:text-[#FF7575]`}
           >
             パフォーマンス
           </span>

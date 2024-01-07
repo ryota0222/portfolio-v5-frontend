@@ -109,7 +109,7 @@ export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
     description: '2人でさまざまな情報を管理するLINEアプリです。カップルや家族におすすめです！',
     siteName: 'Polaris',
     favicon: 'https://stella-polare.ryotanny.com/favicon.ico',
-    thumbnail: 'https://stella-polare.ryotanny.com/favicon.ico/thumbnail.png',
+    thumbnail: 'https://stella-polare.ryotanny.com/thumbnail.png',
   },
   {
     url: 'https://www.ryotanny.com/',

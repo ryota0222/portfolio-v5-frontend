@@ -104,9 +104,17 @@ export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
 
 export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
   {
+    url: 'https://www.notion.so/ryotanny/Polaris-8ed64ca8f1054698918e20196a183626',
+    title: 'Polaris',
+    description: '2人でさまざまな情報を管理するLINEアプリです。カップルや家族におすすめです！',
+    siteName: 'Polaris',
+    favicon: 'https://stella-polare.ryotanny.com/favicon.ico',
+    thumbnail: 'https://stella-polare.ryotanny.com/favicon.ico/thumbnail.png',
+  },
+  {
     url: 'https://www.ryotanny.com/',
     title: '旧ポートフォリオ',
-    description: 'エンジニ/2年/の時に作成したポートフォリオです',
+    description: 'エンジニア2年目の時に作成したポートフォリオです',
     siteName: 'RyoTa.',
     favicon: 'https://www.ryotanny.com/favicons/favicon.ico',
     thumbnail: 'https://www.ryotanny.com/images/mv.png',

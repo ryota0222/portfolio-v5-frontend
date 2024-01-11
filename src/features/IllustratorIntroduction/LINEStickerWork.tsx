@@ -17,7 +17,7 @@ export const LINEStickerWork = memo(() => (
     </div>
     <section className="mb-16">
       <div className="container mx-auto mb-4">
-        <h4 className="font-bodoni text-black dark:text-white font-bold text-lg w-full">飛ばないペンギン</h4>
+        <h4 className="text-black dark:text-white font-bold text-lg w-full pl-4 lg:pl-0">飛ばないペンギン</h4>
       </div>
       <Splide
         aria-label="スタンプ一覧"
@@ -50,7 +50,7 @@ export const LINEStickerWork = memo(() => (
     </section>
     <section className="my-8">
       <div className="container mx-auto mb-4">
-        <h4 className="font-bodoni text-black dark:text-white font-bold text-lg w-full">えもじん</h4>
+        <h4 className="text-black dark:text-white font-bold text-lg w-full pl-4 lg:pl-0">えもじん</h4>
       </div>
       <Splide
         aria-label="スタンプ一覧"
@@ -83,7 +83,7 @@ export const LINEStickerWork = memo(() => (
     </section>
     <section className="my-8">
       <div className="container mx-auto mb-4">
-        <h4 className="font-bodoni text-black dark:text-white font-bold text-lg w-full">ひよっこエンジニア</h4>
+        <h4 className="text-black dark:text-white font-bold text-lg w-full pl-4 lg:pl-0">ひよっこエンジニア</h4>
       </div>
       <Splide
         aria-label="スタンプ一覧"
@@ -116,7 +116,7 @@ export const LINEStickerWork = memo(() => (
     </section>
     <section className="my-8">
       <div className="container mx-auto mb-4">
-        <h4 className="font-bodoni text-black dark:text-white font-bold text-lg w-full">まんまる おとこのこ</h4>
+        <h4 className="text-black dark:text-white font-bold text-lg w-full pl-4 lg:pl-0">まんまる おとこのこ</h4>
       </div>
       <Splide
         aria-label="スタンプ一覧"

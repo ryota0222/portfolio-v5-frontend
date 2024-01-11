@@ -1,12 +1,14 @@
-import { memo } from 'react';
+import { memo, useMemo } from 'react';
+import dayjs from '@/lib/dayjs';
 
 export const Introduction = memo(() => {
+  const age = useMemo(() => {}, []);
   return (
-    <div className="flex items-center">
+    <div className="flex flex-col items-center gap-y-6">
       <img
         src="/images/profile-image.jpg"
         alt="プロフィール画像"
-        className="w-[64px] h-[64px] rounded-full mr-4 md:mr-8 md:w-[96px] md:h-[96px] lg:w-[120px] lg:h-[120px] object-cover"
+        className="w-[120px] h-[120px] rounded-full md:w-[140px] md:h-[140px] lg:w-[180px] lg:h-[180px] object-cover"
         loading="lazy"
       />
       <div>
@@ -16,10 +18,8 @@ export const Introduction = memo(() => {
         >
           I'm <span className="bg-clip-text text-transparent bg-gradation-clip bg-cover">RyoTa.</span>
         </span>
-        <div className="font-rokkitt text-zinc-500 dark:text-zinc-400 font-bold text-md md:text-xl lg:text-2xl">
-          = Design Engineer + Illustrator
-        </div>
       </div>
+      <span className="font-bold text-black dark:text-white ">神戸在住の26歳のデザイナー兼エンジニア</span>
     </div>
   );
 });

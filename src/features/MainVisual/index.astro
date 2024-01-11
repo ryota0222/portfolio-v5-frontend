@@ -4,11 +4,9 @@ import { SnsGroup } from '../SnsGroup';
 
 import { ScrollDown } from './components/ScrollDown';
 import { Introduction } from './Introduction';
-import Vision from './Vision.astro';
 ---
 
 <div class="w-full h-full-dvh flex items-center justify-center flex-col gap-12 md:gap-24 pt-[20vh] pb-[8vh]">
-  <Vision />
   <Introduction />
   <SnsGroup client:load />
   <NewsNotification client:load />

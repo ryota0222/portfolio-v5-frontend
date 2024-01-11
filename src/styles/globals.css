@@ -6,50 +6,50 @@
 
 @font-face {
   font-family: bodoni;
+  font-style: normal;
+  font-weight: 400;
   src: url('/public/fonts/BodoniModa_28pt-Regular.ttf');
   font-display: swap;
-  font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
   font-family: bodoni;
+  font-style: normal;
+  font-weight: 700;
   src: url('/public/fonts/BodoniModa_28pt-Bold.ttf');
   font-display: swap;
-  font-weight: 700;
-  font-style: normal;
 }
 
 @font-face {
   font-family: bodoni;
+  font-style: normal;
+  font-weight: 900;
   src: url('/public/fonts/BodoniModa_28pt-Black.ttf');
   font-display: swap;
-  font-weight: 900;
-  font-style: normal;
 }
 
 @font-face {
   font-family: rokkitt;
+  font-style: normal;
+  font-weight: 400;
   src: url('/public/fonts/Rokkitt-Regular.ttf');
   font-display: swap;
-  font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
   font-family: rokkitt;
+  font-style: normal;
+  font-weight: 700;
   src: url('/public/fonts/Rokkitt-Bold.ttf');
   font-display: swap;
-  font-weight: 700;
-  font-style: normal;
 }
 
 @font-face {
   font-family: rokkitt;
+  font-style: normal;
+  font-weight: 900;
   src: url('/public/fonts/Rokkitt-Black.ttf');
   font-display: swap;
-  font-weight: 900;
-  font-style: normal;
 }
 
 .visibility-hidden {

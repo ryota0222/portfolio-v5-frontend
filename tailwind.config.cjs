@@ -8,9 +8,9 @@ module.exports = {
         dark: '#333333',
       },
       fontFamily: {
-        rokkitt: ['Rokkitt'],
+        rokkitt: ['rokkitt'],
         aoharu: ['aoharu'],
-        bodoni: ['Bodoni Moda'],
+        bodoni: ['bodoni'],
       },
       backgroundImage: {
         'gradation-clip': "url('/images/gradient.webp')",

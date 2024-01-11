@@ -2,7 +2,20 @@ import { memo, useMemo } from 'react';
 import dayjs from '@/lib/dayjs';
 
 export const Introduction = memo(() => {
-  const age = useMemo(() => {}, []);
+  const age = useMemo(() => {
+    const birthdate = '1998-02-22';
+    const date = new Date(birthdate);
+    const today = new Date();
+
+    let age = today.getFullYear() - date.getFullYear();
+    const m = today.getMonth() - date.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < date.getDate())) {
+      age--;
+    }
+
+    return age;
+  }, []);
   return (
     <div className="flex flex-col items-center gap-y-6">
       <img
@@ -19,7 +32,7 @@ export const Introduction = memo(() => {
           I'm <span className="bg-clip-text text-transparent bg-gradation-clip bg-cover">RyoTa.</span>
         </span>
       </div>
-      <span className="font-bold text-black dark:text-white ">神戸在住の26歳のデザイナー兼エンジニア</span>
+      <span className="font-bold text-black dark:text-white ">神戸在住の{age}歳のWebデザイナー兼エンジニア</span>
     </div>
   );
 });

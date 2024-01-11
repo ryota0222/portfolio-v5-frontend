@@ -1,5 +1,5 @@
-import { EffectCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 
-export const useEffectOnce = (effect: EffectCallback) => {
+export const useEffectOnce = (effect: () => void) => {
   useEffect(effect, []);
 };

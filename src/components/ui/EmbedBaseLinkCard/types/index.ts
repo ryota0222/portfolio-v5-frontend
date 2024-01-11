@@ -27,4 +27,8 @@ export interface EmbedBaseLinkCardProps {
    * サイト名
    */
   siteName: string;
+  /**
+   * カテゴリ
+   */
+  category?: string;
 }

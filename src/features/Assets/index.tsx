@@ -18,7 +18,6 @@ export const Assets = memo(() => {
   const data = useAssetData();
   const [selectedIndex, setSelectedIndex] = useState(getIndexFromHash(isBrowser ? window.location.hash : ''));
   const [categories, setCategories] = useState<AssetDataList | null>(null);
-  console.log(categories);
   useEffect(() => {
     if (data !== null) {
       setCategories({

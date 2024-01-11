@@ -106,10 +106,14 @@ export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
   {
     url: 'https://ryotanny.notion.site/Time-4123b1a25d4e499d88721d10601d191f',
     title: '瞑想Time',
-    description: '「今日から瞑想を始めたいけど、どうすればいいかわからない...」そんな初心者のあなたも気軽に始められるアプリです。',
+    description:
+      '「今日から瞑想を始めたいけど、どうすればいいかわからない...」そんな初心者のあなたも気軽に始められるアプリです。',
     siteName: '瞑想Time',
-    favicon: 'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F5707ed87-8ed6-48a3-bb0b-788d010e9641%2F67f654c2-e2e0-4190-9a10-79fa3f19a68c%2Ficon.png?table=block&id=4123b1a2-5d4e-499d-8872-1d10601d191f&spaceId=5707ed87-8ed6-48a3-bb0b-788d010e9641&width=250&userId=5f498fae-dd01-404c-a558-c077673a8267&cache=v2',
-    thumbnail: 'https://www.notion.so/image/https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple116%2Fv4%2Fca%2F69%2F15%2Fca691542-bd42-23cd-e1c8-aebbc684c3c4%2FAppIcon-1x_U007ephone-85-220.png%2F1200x630wa.png?table=block&id=9e3b7601-f734-48c1-a244-2b266515c7af&spaceId=5707ed87-8ed6-48a3-bb0b-788d010e9641&width=500&userId=5f498fae-dd01-404c-a558-c077673a8267&cache=v2',
+    favicon:
+      'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F5707ed87-8ed6-48a3-bb0b-788d010e9641%2F67f654c2-e2e0-4190-9a10-79fa3f19a68c%2Ficon.png?table=block&id=4123b1a2-5d4e-499d-8872-1d10601d191f&spaceId=5707ed87-8ed6-48a3-bb0b-788d010e9641&width=250&userId=5f498fae-dd01-404c-a558-c077673a8267&cache=v2',
+    thumbnail:
+      'https://www.notion.so/image/https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple116%2Fv4%2Fca%2F69%2F15%2Fca691542-bd42-23cd-e1c8-aebbc684c3c4%2FAppIcon-1x_U007ephone-85-220.png%2F1200x630wa.png?table=block&id=9e3b7601-f734-48c1-a244-2b266515c7af&spaceId=5707ed87-8ed6-48a3-bb0b-788d010e9641&width=500&userId=5f498fae-dd01-404c-a558-c077673a8267&cache=v2',
+    category: 'スマホアプリ',
   },
   {
     url: 'https://ryotanny.notion.site/Polaris-8ed64ca8f1054698918e20196a183626',
@@ -118,6 +122,7 @@ export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
     siteName: 'Polaris',
     favicon: 'https://stella-polare.ryotanny.com/favicon.ico',
     thumbnail: 'https://stella-polare.ryotanny.com/thumbnail.png',
+    category: 'LINEアプリ',
   },
   {
     url: 'https://www.ryotanny.com/',
@@ -126,6 +131,7 @@ export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
     siteName: 'RyoTa.',
     favicon: 'https://www.ryotanny.com/favicons/favicon.ico',
     thumbnail: 'https://www.ryotanny.com/images/mv.png',
+    category: 'Webアプリ',
   },
   {
     url: 'https://tsunagaru-timer.ryotanny.com/',
@@ -135,13 +141,6 @@ export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
     favicon: 'https://tsunagaru-timer.ryotanny.com/favicon.ico',
     siteName: 'つながるTIMER',
     thumbnail: 'https://tsunagaru-timer.ryotanny.com/og-image.png',
-  },
-  {
-    url: 'http://w-tetris.ryotanny.com/',
-    title: 'W Tetris',
-    description: 'テトリスをCanvasで作成しました。PWA対応',
-    favicon: 'https://w-tetris.ryotanny.com/favicon.ico',
-    siteName: 'W Tetris',
-    thumbnail: 'https://w-tetris.ryotanny.com/logo192.png',
+    category: 'Webアプリ',
   },
 ];

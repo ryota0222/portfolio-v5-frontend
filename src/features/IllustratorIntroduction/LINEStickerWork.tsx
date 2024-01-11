@@ -65,7 +65,7 @@ export const LINEStickerWork = memo(() => (
             pauseOnHover: true,
             pauseOnFocus: false,
             rewind: false,
-            speed: 0.4,
+            speed: -0.4,
           },
         }}
         extensions={{ AutoScroll }}
@@ -131,7 +131,7 @@ export const LINEStickerWork = memo(() => (
             pauseOnHover: true,
             pauseOnFocus: false,
             rewind: false,
-            speed: 0.4,
+            speed: -0.4,
           },
         }}
         extensions={{ AutoScroll }}

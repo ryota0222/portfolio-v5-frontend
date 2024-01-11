@@ -6,7 +6,6 @@ import dayjs from '@/lib/dayjs';
 
 export const OutputList = memo(() => {
   const data = useAssetData();
-  console.log(data);
   const targetData = useMemo(() => {
     if (data) {
       const flatList = [];

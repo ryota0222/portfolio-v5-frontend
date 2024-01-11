@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useCallback, useState, useRef, useLayoutEffect } from 'react';
+import { useCallback, useState, useRef, useLayoutEffect } from 'react';
 import { isBrowser, noop } from '@/misc/util';
 
 type parserOptions<T> =
@@ -15,7 +15,7 @@ export const useLocalStorage = <T>(
   key: string,
   initialValue?: T,
   options?: parserOptions<T>
-): [T | undefined, Dispatch<SetStateAction<T | undefined>>, () => void] => {
+): [T | undefined, any, () => void] => {
   if (!isBrowser) {
     return [initialValue as T, noop, noop];
   }
@@ -52,8 +52,8 @@ export const useLocalStorage = <T>(
   useLayoutEffect(() => setState(initializer.current(key)), [key]);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const set: Dispatch<SetStateAction<T | undefined>> = useCallback(
-    (valOrFunc) => {
+  const set: any = useCallback(
+    (valOrFunc: any) => {
       try {
         const newState = typeof valOrFunc === 'function' ? (valOrFunc as Function)(state) : valOrFunc;
         if (typeof newState === 'undefined') return;

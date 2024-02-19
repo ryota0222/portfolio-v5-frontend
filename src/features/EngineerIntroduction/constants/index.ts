@@ -2,6 +2,15 @@ import type { EmbedBaseLinkCardProps } from '@/components/ui/EmbedBaseLinkCard/t
 
 export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
   {
+    url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrWwF7Dkwl77i9uc2H4H4mI%2F%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25A0%25E3%2581%258B%25E3%2582%2589%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2%26viewport%3D420%252C47%252C0.04%26t%3DhdrIKsy549w8YmBV-1%26scaling%3Dcontain%26mode%3Ddesign',
+    title: 'エンジニアだからできるデザイン',
+    description: '2024/2/17',
+    date: '2024-2-17',
+    siteName: 'Figma',
+    favicon: 'https://static.figma.com/app/icon/1/favicon.png',
+    thumbnail: '/images/slides/2024-2-17.webp',
+  },
+  {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FCNFeVIHuIVgHjNVUsZqpAK%2F2023%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A%3Fpage-id%3D0%253A1%26node-id%3D1-2%26scaling%3Dscale-down%26mode%3Ddesign',
     title: '2023年振り返り',
     description: '2023/12/15',

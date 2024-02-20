@@ -150,7 +150,7 @@ export const Assets = memo(() => {
         className={`${isOpened ? 'z-[99] w-screen h-screen bg-black/[.6] fixed top-0 left-0' : 'w-0 h-0 opacity-0'}`}
         onClick={close}
       >
-        <dialog ref={dialogRef} className="w-[90vw] h-[90vh] p-0">
+        <dialog ref={dialogRef} className="w-[90vw] md:h-[90vh] h-[50vh] p-0">
           {isBrowser && (
             <iframe
               width="100%"

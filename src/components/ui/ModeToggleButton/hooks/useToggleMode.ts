@@ -10,14 +10,18 @@ type UseDarkMode = () => {
   toggle: (isDark?: boolean) => void;
 };
 
-const theme = localStorage.getItem('theme');
+const theme = (() => {
+  if (typeof window !== 'undefined') {
+    // Perform localStorage action
+    return localStorage.getItem('theme');
+  }
+})();
 
-const isInitialDark =
-  theme !== null
-    ? JSON.parse(theme) === Mode.Dark
-    : isBrowser
-    ? window.matchMedia('(prefers-color-scheme: dark)').matches
-    : false;
+const isInitialDark = theme
+  ? JSON.parse(theme) === Mode.Dark
+  : isBrowser
+  ? window.matchMedia('(prefers-color-scheme: dark)').matches
+  : false;
 
 export const useIsDarkMode = createGlobalState<boolean>(isInitialDark);
 

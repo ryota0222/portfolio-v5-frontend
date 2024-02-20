@@ -1,10 +1,10 @@
 ---
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 
 import type { EmbedBaseLinkCardProps } from './types';
 
 type Props = EmbedBaseLinkCardProps;
-const { title, description, url, favicon, thumbnail, siteName } = Astro.props;
+const { title, description, url, favicon, thumbnail, siteName, category } = Astro.props;
 ---
 
 <a
@@ -14,7 +14,16 @@ const { title, description, url, favicon, thumbnail, siteName } = Astro.props;
   class="flex items-center w-full border dark:border-zinc-500 hover:bg-zinc-50 hover:dark:bg-zinc-800 rounded overflow-hidden h-[120px]"
 >
   <div class="p-3 flex-1 overflow-hidden">
-    <h1 class="font-bold text-sm md:text-md text-black dark:text-white truncate">{title}</h1>
+    <div class="flex justify-between">
+      <h1 class="font-bold text-sm md:text-md text-black dark:text-white truncate">{title}</h1>
+      {
+        category && (
+          <span class="rounded-full ml-2 text-xs bg-zinc-100 dark:bg-zinc-800 text-dark dark:text-white px-2 py-1">
+            # {category}
+          </span>
+        )
+      }
+    </div>
     <div class="text-sm my-2 text-black/80 dark:text-white/80 line-clamp-2">
       {description}
     </div>

@@ -2,6 +2,33 @@ import type { EmbedBaseLinkCardProps } from '@/components/ui/EmbedBaseLinkCard/t
 
 export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
   {
+    url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FrWwF7Dkwl77i9uc2H4H4mI%2F%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25B8%25E3%2583%258B%25E3%2582%25A2%25E3%2581%25A0%25E3%2581%258B%25E3%2582%2589%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2%26viewport%3D420%252C47%252C0.04%26t%3DhdrIKsy549w8YmBV-1%26scaling%3Dcontain%26mode%3Ddesign',
+    title: 'エンジニアだからできるデザイン',
+    description: '2024/2/17',
+    date: '2024-2-17',
+    siteName: 'Figma',
+    favicon: 'https://static.figma.com/app/icon/1/favicon.png',
+    thumbnail: '/images/slides/2024-2-17.webp',
+  },
+  {
+    url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FCNFeVIHuIVgHjNVUsZqpAK%2F2023%25E6%258C%25AF%25E3%2582%258A%25E8%25BF%2594%25E3%2582%258A%3Fpage-id%3D0%253A1%26node-id%3D1-2%26scaling%3Dscale-down%26mode%3Ddesign',
+    title: '2023年振り返り',
+    description: '2023/12/15',
+    date: '2023-12-15',
+    siteName: 'Figma',
+    favicon: 'https://static.figma.com/app/icon/1/favicon.png',
+    thumbnail: '/images/slides/2023-12-15.webp',
+  },
+  {
+    url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ffya36ZLpl0HrX2YL3fKxqi%2FBeer-Bust%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2%26viewport%3D260%252C242%252C0.1%26t%3DPeoO03HLp8fvaTH0-1%26scaling%3Dcontain%26mode%3Ddesign',
+    title: 'Beer Bust',
+    description: '2023/10/19',
+    date: '2023-10-19',
+    siteName: 'Figma',
+    favicon: 'https://static.figma.com/app/icon/1/favicon.png',
+    thumbnail: '/images/slides/2023-10-19.webp',
+  },
+  {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FnWOVEhLcy4lZ0lhUUyeQat%2F%25E3%2580%2590%25E9%259D%259E%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%258A%25E3%2583%25BC%25E5%2590%2591%25E3%2581%2591%25E3%2580%2591%25E3%2582%25BD%25E3%2583%2595%25E3%2583%2588%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A2%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%25E3%2581%25AE%25E5%25A7%258B%25E3%2582%2581%25E6%2596%25B9%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D1-2%26viewport%3D514%252C921%252C0.07%26t%3Dcl49c5cSGjCXyjbR',
     title: '【非デザイナー向け】ソフトウェアデザインの始め方',
     description: '2023/7/30',
@@ -10,7 +37,6 @@ export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
     favicon: 'https://static.figma.com/app/icon/1/favicon.png',
     thumbnail: '/images/slides/2023-7-30.webp',
   },
-
   {
     url: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F6MD1YxdH6FFAAGRHBd2x3L%2F%25E5%258B%2589%25E5%25BC%25B7%25E4%25BC%259A%3Fpage-id%3D28%253A35%26node-id%3D28%253A36%26viewport%3D505%252C59%252C0.06%26scaling%3Dcontain%26starting-point-node-id%3D28%253A36',
     title: '転職活動が終わった話',
@@ -87,12 +113,34 @@ export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
 
 export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
   {
+    url: 'https://ryotanny.notion.site/Time-4123b1a25d4e499d88721d10601d191f',
+    title: '瞑想Time',
+    description:
+      '「今日から瞑想を始めたいけど、どうすればいいかわからない...」そんな初心者のあなたも気軽に始められるアプリです。',
+    siteName: '瞑想Time',
+    favicon:
+      'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F5707ed87-8ed6-48a3-bb0b-788d010e9641%2F67f654c2-e2e0-4190-9a10-79fa3f19a68c%2Ficon.png?table=block&id=4123b1a2-5d4e-499d-8872-1d10601d191f&spaceId=5707ed87-8ed6-48a3-bb0b-788d010e9641&width=250&userId=5f498fae-dd01-404c-a558-c077673a8267&cache=v2',
+    thumbnail:
+      'https://www.notion.so/image/https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple116%2Fv4%2Fca%2F69%2F15%2Fca691542-bd42-23cd-e1c8-aebbc684c3c4%2FAppIcon-1x_U007ephone-85-220.png%2F1200x630wa.png?table=block&id=9e3b7601-f734-48c1-a244-2b266515c7af&spaceId=5707ed87-8ed6-48a3-bb0b-788d010e9641&width=500&userId=5f498fae-dd01-404c-a558-c077673a8267&cache=v2',
+    category: 'スマホアプリ',
+  },
+  {
+    url: 'https://ryotanny.notion.site/Polaris-8ed64ca8f1054698918e20196a183626',
+    title: 'Polaris',
+    description: '2人でさまざまな情報を管理するLINEアプリです。カップルや家族におすすめです！',
+    siteName: 'Polaris',
+    favicon: 'https://polaris.site.ryotanny.com/favicon.ico',
+    thumbnail: 'https://polaris.site.ryotanny.com/thumbnail.png',
+    category: 'LINEアプリ',
+  },
+  {
     url: 'https://site.ryotanny.com/',
     title: '旧ポートフォリオ',
-    description: 'エンジニ/2年/の時に作成したポートフォリオです',
+    description: 'エンジニア2年目の時に作成したポートフォリオです',
     siteName: 'RyoTa.',
     favicon: 'https://site.ryotanny.com/favicons/favicon.ico',
     thumbnail: 'https://site.ryotanny.com/images/mv.png',
+    category: 'Webアプリ',
   },
   {
     url: 'https://tsunagaru-timer.site.ryotanny.com/',
@@ -102,13 +150,6 @@ export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
     favicon: 'https://tsunagaru-timer.site.ryotanny.com/favicon.ico',
     siteName: 'つながるTIMER',
     thumbnail: 'https://tsunagaru-timer.site.ryotanny.com/og-image.png',
-  },
-  {
-    url: 'http://w-tetris.site.ryotanny.com/',
-    title: 'W Tetris',
-    description: 'テトリスをCanvasで作成しました。PWA対応',
-    favicon: 'https://w-tetris.site.ryotanny.com/favicon.ico',
-    siteName: 'W Tetris',
-    thumbnail: 'https://w-tetris.site.ryotanny.com/logo192.png',
+    category: 'Webアプリ',
   },
 ];

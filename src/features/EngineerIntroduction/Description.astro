@@ -5,6 +5,7 @@ import ChronologicalTable from './components/ChronologicalTable.astro';
 import DescriptionItem from './components/DescriptionItem.astro';
 import { LinkList } from './components/LinkList';
 import { SkillSet } from './components/SkillSet';
+import { OutputList } from './components/OutputList';
 import UnorderListTable from './components/UnorderListTable.astro';
 import { APPLICATION_LIST, SLIDE_LIST } from './constants';
 ---
@@ -13,11 +14,13 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
   <!-- 名前 -->
   <DescriptionItem title="名前" color="before:text-[#ef4444]">りょーた</DescriptionItem>
   <!-- 所属 -->
-  <DescriptionItem title="所属" color="before:text-[#f59e0b]">株式会社ニュートラル{'　'}CTO兼デザインエンジニア</DescriptionItem>
+  <DescriptionItem title="所属" color="before:text-[#f59e0b]">
+    株式会社ニュートラル{'　'}CTO兼デザインエンジニア
+  </DescriptionItem>
   <!-- 自己紹介 -->
   <DescriptionItem title="自己紹介" color="before:text-[#eab308]">
     ３年間フロントエンドエンジニアとして活動後、デザインエンジニアにキャリアチェンジ<br />
-    フロントエンド全般とデザインに興味があります。作ることが好きで、趣味でWebアプリを作っています。<br />
+    フロントエンド全般とデザインに興味があります。作ることが好きで、趣味でアプリを作っています。<br />
     登壇、記事の執筆も行っています。<br />
     <br />
     エンジニアになった詳細な経緯はこちらでご確認ください。
@@ -37,11 +40,11 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
     <div class="mt-4">
       <EmbedBaseLinkCard
         url="https://musubite-job.com/recruitments/JZlLrqiB2jnx"
-        description="フォロワー採用のMusubiteに興味はありませんか？デザインエンジニアとしてお話します💪"
-        title="MusubiteのMVP作成に興味をお持ちの方、ぜひお話ししましょう！"
+        description="デザイナー兼エンジニアの私がお話しします"
+        title="カジュアルトーク"
         favicon="https://musubite-job.com/favicon.ico"
         siteName="Musubite"
-        thumbnail="https://cdn.api.musubite-job.com/as3yhg6zklvgx4gs5q4xylkf49qx?timestamp=1694004854320"
+        thumbnail="https://cdn.api.musubite-job.com/bt9lj0jv06btqujzctinhamvr4uh"
       />
     </div>
   </DescriptionItem>
@@ -49,31 +52,36 @@ import { APPLICATION_LIST, SLIDE_LIST } from './constants';
   <DescriptionItem title="経歴" color="before:text-[#84cc16]">
     <ChronologicalTable
       data={[
-        { date: '2020-03', description: '神戸大学  工学部  機械工学科卒業' },
-        { date: '2020-04', description: '株式会社神戸デジタル・ラボ入社' },
-        { date: '2022-12', description: '株式会社神戸デジタル・ラボ退社' },
         { date: '2023-01', description: '株式会社ニュートラル入社' },
+        { date: '2022-12', description: '株式会社神戸デジタル・ラボ退社' },
+        { date: '2020-04', description: '株式会社神戸デジタル・ラボ入社' },
+        { date: '2020-03', description: '神戸大学  工学部  機械工学科卒業' },
       ]}
     />
   </DescriptionItem>
-  <!-- 副業 -->
-  <DescriptionItem title="副業" color="before:text-[#10b981]">
-    <ChronologicalTable
-      data={[
-        { date: '2022-03', description: '新規サービスのモックをFigmaで作成する業務委託（2022年5月に終了）' },
-        { date: '2023-05', description: '新規サービスのデザイン業務とWebフロント開発の業務委託' },
-      ]}
-    />
+  <!-- アウトプット -->
+  <DescriptionItem title="アウトプット" color="before:text-[#10b981]">
+    <OutputList client:load />
   </DescriptionItem>
   <!-- 活動 -->
   <DescriptionItem title="活動" color="before:text-[#14b8a6]">
     <ChronologicalTable
       data={[
-        { date: '2021-01', description: 'つながる勉強会の運営（2023年9月に終了）' },
-        { date: '2022-06', description: 'Web Creators Meetupの運営（2022年12月に終了）' },
-        { date: '2022-06', description: 'YouTubeインタビュー（【対談動画】フロントエンドエンジニアのりょーたさんに色々聞いてみたぞーー）', link: 'https://youtu.be/lgsR7iWB9hw' },
+        {
+          date: '2023-10',
+          description:
+            'モローさんのYouTubeインタビュー（25歳の若手CTO登場！「デザインエンジニア」の仕事内容や20代で役員クラスのIT人材になることができた秘訣を聞いてみた！）',
+          link: 'https://www.youtube.com/watch?v=RrxlAHAx-Ro',
+        },
         { date: '2023-02', description: 'ブログ記事インタビュー', link: 'https://sakai-kojiblog.com/interview-no4/' },
-        { date: '2023-10', description: 'YouTubeインタビュー（25歳の若手CTO登場！「デザインエンジニア」の仕事内容や20代で役員クラスのIT人材になることができた秘訣を聞いてみた！）', link: 'https://www.youtube.com/watch?v=RrxlAHAx-Ro' },
+        {
+          date: '2022-06',
+          description:
+            'YouTubeインタビュー（【対談動画】フロントエンドエンジニアのりょーたさんに色々聞いてみたぞーー）',
+          link: 'https://youtu.be/lgsR7iWB9hw',
+        },
+        { date: '2022-06', description: 'Web Creators Meetupの運営（2022年12月に終了）' },
+        { date: '2021-01', description: 'つながる勉強会の運営（2023年9月に終了）' },
       ]}
     />
   </DescriptionItem>

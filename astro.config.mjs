@@ -1,6 +1,3 @@
-
-
-import image from "@astrojs/image";
 import prefetch from "@astrojs/prefetch";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
@@ -11,8 +8,8 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://portfolio.site.ryotanny.com",
-  integrations: [react(), image(), prefetch(), tailwind(), AstroPWA({
-    manifestFilename: '/favicons/site.webmanifest',
+  integrations: [react(), prefetch(), tailwind(), AstroPWA({
+    manifestFilename: './public/favicons/site.webmanifest',
     registerType: 'autoUpdate'
-  })]
+  })],
 });

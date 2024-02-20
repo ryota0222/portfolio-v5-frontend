@@ -37,7 +37,6 @@ jobs:
           python releases.py
           mv *.json ./../src/data/releases/
       - name: commit file
-        working-directory: src
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"

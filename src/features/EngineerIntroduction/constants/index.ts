@@ -87,28 +87,28 @@ export const SLIDE_LIST: EmbedBaseLinkCardProps[] = [
 
 export const APPLICATION_LIST: EmbedBaseLinkCardProps[] = [
   {
-    url: 'https://www.ryotanny.com/',
+    url: 'https://site.ryotanny.com/',
     title: '旧ポートフォリオ',
     description: 'エンジニ/2年/の時に作成したポートフォリオです',
     siteName: 'RyoTa.',
-    favicon: 'https://www.ryotanny.com/favicons/favicon.ico',
-    thumbnail: 'https://www.ryotanny.com/images/mv.png',
+    favicon: 'https://site.ryotanny.com/favicons/favicon.ico',
+    thumbnail: 'https://site.ryotanny.com/images/mv.png',
   },
   {
-    url: 'https://tsunagaru-timer.ryotanny.com/',
+    url: 'https://tsunagaru-timer.site.ryotanny.com/',
     title: 'つながるTIMER',
     description:
       'プレゼンテーションの時間管理を行うアプリケーションです。同じアカウントでログインしていただくと複数台でも同期的に時間の管理が可能です。',
-    favicon: 'https://tsunagaru-timer.ryotanny.com/favicon.ico',
+    favicon: 'https://tsunagaru-timer.site.ryotanny.com/favicon.ico',
     siteName: 'つながるTIMER',
-    thumbnail: 'https://tsunagaru-timer.ryotanny.com/og-image.png',
+    thumbnail: 'https://tsunagaru-timer.site.ryotanny.com/og-image.png',
   },
   {
-    url: 'http://w-tetris.ryotanny.com/',
+    url: 'http://w-tetris.site.ryotanny.com/',
     title: 'W Tetris',
     description: 'テトリスをCanvasで作成しました。PWA対応',
-    favicon: 'https://w-tetris.ryotanny.com/favicon.ico',
+    favicon: 'https://w-tetris.site.ryotanny.com/favicon.ico',
     siteName: 'W Tetris',
-    thumbnail: 'https://w-tetris.ryotanny.com/logo192.png',
+    thumbnail: 'https://w-tetris.site.ryotanny.com/logo192.png',
   },
 ];

@@ -9,7 +9,9 @@ export const classNames = (...classes: string[]): string => {
 export const capitalize = (str: string): string => str.charAt(0).toUpperCase() + str.slice(1);
 
 export const getIndexFromHash = (hash: string): number => {
-  switch (hash) {
+  // searchクエリがあれば切り取る
+  const _hash = hash.split('?')[0];
+  switch (_hash) {
     case '#zenn':
       return 1;
     case '#qiita':

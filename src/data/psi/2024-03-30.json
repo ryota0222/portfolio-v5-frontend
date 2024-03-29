@@ -1,0 +1,301 @@
+{
+    "kind": "pagespeedonline#result",
+    "id": "https://portfolio.site.ryotanny.com/",
+    "lighthouseResult": {
+        "lighthouseVersion": "11.5.0",
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/122.0.6261.94 Safari/537.36",
+        "fetchTime": "2024-03-29T15:05:43.964Z",
+        "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/122.0.6261.94 Safari/537.36",
+            "benchmarkIndex": 385,
+            "credits": {
+                "axe-core": "4.8.1"
+            }
+        },
+        "performance": {
+            "id": "performance",
+            "title": "パフォーマンス",
+            "score": 0.85,
+            "auditRefs": [
+                {
+                    "id": "first-contentful-paint",
+                    "weight": 10,
+                    "group": "metrics",
+                    "acronym": "FCP",
+                    "relevantAudits": [
+                        "server-response-time",
+                        "render-blocking-resources",
+                        "redirects",
+                        "critical-request-chains",
+                        "uses-text-compression",
+                        "uses-rel-preconnect",
+                        "uses-rel-preload",
+                        "font-display",
+                        "unminified-javascript",
+                        "unminified-css",
+                        "unused-css-rules"
+                    ]
+                },
+                {
+                    "id": "largest-contentful-paint",
+                    "weight": 25,
+                    "group": "metrics",
+                    "acronym": "LCP",
+                    "relevantAudits": [
+                        "server-response-time",
+                        "render-blocking-resources",
+                        "redirects",
+                        "critical-request-chains",
+                        "uses-text-compression",
+                        "uses-rel-preconnect",
+                        "uses-rel-preload",
+                        "font-display",
+                        "unminified-javascript",
+                        "unminified-css",
+                        "unused-css-rules",
+                        "largest-contentful-paint-element",
+                        "prioritize-lcp-image",
+                        "unused-javascript",
+                        "efficient-animated-content",
+                        "total-byte-weight",
+                        "lcp-lazy-loaded"
+                    ]
+                },
+                {
+                    "id": "total-blocking-time",
+                    "weight": 30,
+                    "group": "metrics",
+                    "acronym": "TBT",
+                    "relevantAudits": [
+                        "long-tasks",
+                        "third-party-summary",
+                        "third-party-facades",
+                        "bootup-time",
+                        "mainthread-work-breakdown",
+                        "dom-size",
+                        "duplicated-javascript",
+                        "legacy-javascript",
+                        "viewport"
+                    ]
+                },
+                {
+                    "id": "cumulative-layout-shift",
+                    "weight": 25,
+                    "group": "metrics",
+                    "acronym": "CLS",
+                    "relevantAudits": [
+                        "layout-shift-elements",
+                        "layout-shifts",
+                        "non-composited-animations",
+                        "unsized-images"
+                    ]
+                },
+                {
+                    "id": "speed-index",
+                    "weight": 10,
+                    "group": "metrics",
+                    "acronym": "SI"
+                }
+            ]
+        },
+        "accessibility": {
+            "id": "accessibility",
+            "title": "ユーザー補助",
+            "description": "これらのチェックにより、[ウェブアプリのユーザー補助機能の改善点](https://developer.chrome.com/docs/lighthouse/accessibility/)が明確になります。ただし、自動的に検出できる問題は一部に過ぎず、ウェブアプリのユーザー補助機能に問題がないことが保証されたわけではないため、[手動テスト](https://web.dev/articles/how-to-review)も実施することをおすすめします。",
+            "manualDescription": "ここに、自動テストツールではカバーできない範囲に対処する項目が表示されます。詳しくは、[ユーザー補助機能の審査を実施する](https://web.dev/articles/how-to-review)方法についてのガイドをご覧ください。",
+            "score": 0.88,
+            "auditRefs": [
+                {
+                    "id": "aria-allowed-attr",
+                    "weight": 10,
+                    "group": "a11y-aria"
+                },
+                {
+                    "id": "aria-allowed-role",
+                    "weight": 1,
+                    "group": "a11y-aria"
+                },
+                {
+                    "id": "aria-hidden-body",
+                    "weight": 10,
+                    "group": "a11y-aria"
+                },
+                {
+                    "id": "aria-hidden-focus",
+                    "weight": 7,
+                    "group": "a11y-aria"
+                },
+                {
+                    "id": "aria-required-attr",
+                    "weight": 10,
+                    "group": "a11y-aria"
+                },
+                {
+                    "id": "aria-roles",
+                    "weight": 7,
+                    "group": "a11y-aria"
+                },
+                {
+                    "id": "aria-valid-attr-value",
+                    "weight": 10,
+                    "group": "a11y-aria"
+                },
+                {
+                    "id": "aria-valid-attr",
+                    "weight": 10,
+                    "group": "a11y-aria"
+                },
+                {
+                    "id": "button-name",
+                    "weight": 10,
+                    "group": "a11y-names-labels"
+                },
+                {
+                    "id": "color-contrast",
+                    "weight": 7,
+                    "group": "a11y-color-contrast"
+                },
+                {
+                    "id": "definition-list",
+                    "weight": 7,
+                    "group": "a11y-tables-lists"
+                },
+                {
+                    "id": "dlitem",
+                    "weight": 7,
+                    "group": "a11y-tables-lists"
+                },
+                {
+                    "id": "document-title",
+                    "weight": 7,
+                    "group": "a11y-names-labels"
+                },
+                {
+                    "id": "duplicate-id-active",
+                    "weight": 7,
+                    "group": "a11y-navigation"
+                },
+                {
+                    "id": "frame-title",
+                    "weight": 7,
+                    "group": "a11y-names-labels"
+                },
+                {
+                    "id": "heading-order",
+                    "weight": 3,
+                    "group": "a11y-navigation"
+                },
+                {
+                    "id": "html-has-lang",
+                    "weight": 7,
+                    "group": "a11y-language"
+                },
+                {
+                    "id": "html-lang-valid",
+                    "weight": 7,
+                    "group": "a11y-language"
+                },
+                {
+                    "id": "image-alt",
+                    "weight": 10,
+                    "group": "a11y-names-labels"
+                },
+                {
+                    "id": "image-redundant-alt",
+                    "weight": 1,
+                    "group": "a11y-names-labels"
+                },
+                {
+                    "id": "link-in-text-block",
+                    "weight": 7,
+                    "group": "a11y-color-contrast"
+                },
+                {
+                    "id": "link-name",
+                    "weight": 7,
+                    "group": "a11y-names-labels"
+                },
+                {
+                    "id": "list",
+                    "weight": 7,
+                    "group": "a11y-tables-lists"
+                },
+                {
+                    "id": "listitem",
+                    "weight": 7,
+                    "group": "a11y-tables-lists"
+                },
+                {
+                    "id": "meta-viewport",
+                    "weight": 10,
+                    "group": "a11y-best-practices"
+                }
+            ]
+        },
+        "seo": {
+            "id": "seo",
+            "title": "SEO",
+            "description": "これらのチェックを行うことで、ページが検索エンジン最適化の基本的な推奨事項に沿っていることを確認できます。検索ランキングに影響する可能性のある要素には、Lighthouse で考慮されている要素以外に、[ウェブに関する主な指標](https://web.dev/explore/vitals)のスコアなどもあります。[Google 検索の基本事項の詳細](https://support.google.com/webmasters/answer/35769)",
+            "manualDescription": "サイトでこれらの他の検証ツールを実行し、SEO のその他のおすすめの方法をご確認ください。",
+            "score": 1,
+            "auditRefs": [
+                {
+                    "id": "viewport",
+                    "weight": 1,
+                    "group": "seo-mobile"
+                },
+                {
+                    "id": "document-title",
+                    "weight": 1,
+                    "group": "seo-content"
+                },
+                {
+                    "id": "meta-description",
+                    "weight": 1,
+                    "group": "seo-content"
+                },
+                {
+                    "id": "http-status-code",
+                    "weight": 1,
+                    "group": "seo-crawl"
+                },
+                {
+                    "id": "link-text",
+                    "weight": 1,
+                    "group": "seo-content"
+                },
+                {
+                    "id": "crawlable-anchors",
+                    "weight": 1,
+                    "group": "seo-crawl"
+                },
+                {
+                    "id": "is-crawlable",
+                    "weight": 1,
+                    "group": "seo-crawl"
+                },
+                {
+                    "id": "image-alt",
+                    "weight": 1,
+                    "group": "seo-content"
+                },
+                {
+                    "id": "hreflang",
+                    "weight": 1,
+                    "group": "seo-content"
+                },
+                {
+                    "id": "canonical",
+                    "weight": 1,
+                    "group": "seo-content"
+                },
+                {
+                    "id": "plugins",
+                    "weight": 1,
+                    "group": "seo-content"
+                }
+            ]
+        }
+    }
+}
